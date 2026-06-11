@@ -73,6 +73,8 @@ html[data-accent="plum"] {
 html {
   background: var(--bg);
   scrollbar-color: var(--faint) var(--bg);
+  /* decorative layers may poke past the viewport; never allow horizontal panning */
+  overflow-x: clip;
 }
 
 body {

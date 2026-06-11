@@ -25,7 +25,7 @@ export function Logo() {
         onClick={cycleAccent}
         aria-label="Change the accent color"
         title="Click me"
-        className="ml-px cursor-pointer text-accent transition-transform duration-200 hover:scale-150"
+        className="-mx-2 -my-2 cursor-pointer px-2 py-2 text-accent transition-transform duration-200 hover:scale-150"
       >
         .
       </button>

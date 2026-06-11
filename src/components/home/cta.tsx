@@ -44,7 +44,7 @@ export function HomeCta() {
               </Magnetic>
               <a
                 href={`mailto:${site.email}`}
-                className="link font-mono text-[13px] tracking-[0.04em] !text-cream-ink/70 hover:!text-cream-ink"
+                className="link inline-block py-2 font-mono text-[13px] tracking-[0.04em] !text-cream-ink/70 hover:!text-cream-ink"
               >
                 {site.email}
               </a>

@@ -52,7 +52,7 @@ export default async function CaseStudyPage({
         <Reveal>
           <Link
             href="/work"
-            className="group inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.16em] text-muted uppercase transition-colors hover:text-fg"
+            className="group inline-flex items-center gap-2 py-2 font-mono text-[12px] tracking-[0.16em] text-muted uppercase transition-colors hover:text-fg"
           >
             <Arrow className="size-3.5 rotate-180 transition-transform group-hover:-translate-x-1" />
             All work

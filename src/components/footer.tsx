@@ -42,7 +42,7 @@ export function Footer() {
           </div>
           <div>
             <p className="eyebrow">Pages</p>
-            <ul className="mt-4 space-y-2.5 text-[14px]">
+            <ul className="mt-3 space-y-1 text-[14px]">
               {[
                 { href: "/", label: "Home" },
                 { href: "/work", label: "Work" },
@@ -52,7 +52,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-muted transition-colors hover:text-fg"
+                    className="inline-block py-1.5 text-muted transition-colors hover:text-fg"
                   >
                     {l.label}
                   </Link>
@@ -62,7 +62,7 @@ export function Footer() {
           </div>
           <div>
             <p className="eyebrow">Elsewhere</p>
-            <ul className="mt-4 space-y-2.5 text-[14px]">
+            <ul className="mt-3 space-y-1 text-[14px]">
               {[
                 { href: site.instagram, label: "Instagram" },
                 { href: site.blog, label: "Blog" },
@@ -74,7 +74,7 @@ export function Footer() {
                     href={l.href}
                     target={l.href.startsWith("http") ? "_blank" : undefined}
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-muted transition-colors hover:text-fg"
+                    className="inline-flex items-center gap-1.5 py-1.5 text-muted transition-colors hover:text-fg"
                   >
                     {l.label}
                     {l.href.startsWith("http") && (

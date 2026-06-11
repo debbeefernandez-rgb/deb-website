@@ -24,7 +24,7 @@ export function SelectedWork() {
           <Reveal delay={0.2}>
             <Link
               href="/work"
-              className="group mb-2 hidden items-center gap-2 font-mono text-[12px] tracking-[0.16em] text-muted uppercase transition-colors hover:text-fg sm:inline-flex"
+              className="group mb-2 hidden items-center gap-2 py-2 font-mono text-[12px] tracking-[0.16em] text-muted uppercase transition-colors hover:text-fg sm:inline-flex"
             >
               All work
               <Arrow className="size-3.5 transition-transform group-hover:translate-x-1" />
@@ -43,7 +43,7 @@ export function SelectedWork() {
         <Reveal className="mt-10 sm:hidden">
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.16em] text-muted uppercase"
+            className="inline-flex items-center gap-2 py-2 font-mono text-[12px] tracking-[0.16em] text-muted uppercase"
           >
             All work <Arrow className="size-3.5" />
           </Link>

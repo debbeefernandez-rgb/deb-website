@@ -59,7 +59,7 @@ export function Services() {
                   </p>
                   <Link
                     href="/contact"
-                    className="mt-5 inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.16em] text-accent uppercase transition-colors hover:text-accent-bright"
+                    className="mt-4 inline-flex items-center gap-2 py-2 font-mono text-[12px] tracking-[0.16em] text-accent uppercase transition-colors hover:text-accent-bright"
                   >
                     Start this
                     <Arrow className="size-3.5 transition-transform group-hover:translate-x-1" />
