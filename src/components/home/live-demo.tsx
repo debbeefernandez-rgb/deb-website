@@ -2,7 +2,7 @@ import Image from "next/image";
 import { site } from "@/lib/site";
 import { SectionHeading } from "../section-heading";
 import { Reveal } from "../reveal";
-import { ArrowUpRight } from "../buttons";
+import { ArrowCircle } from "../buttons";
 import { Magnetic } from "../magnetic";
 
 export function LiveDemo() {
@@ -12,12 +12,12 @@ export function LiveDemo() {
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_1.15fr]">
           <div>
             <SectionHeading
-              index="04"
+              index="03"
               eyebrow="Try a real build"
               lines={[
                 "Don't trust",
                 <span key="2">
-                  the <span className="serif-italic text-accent">screenshots.</span>
+                  the <span className="text-glint">screenshots.</span>
                 </span>,
               ]}
               lede="This is a sandboxed copy of a content engine I built and run in production. Click around, schedule a post, break something. That's what it's there for."
@@ -29,10 +29,10 @@ export function LiveDemo() {
                     href={site.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-[15px] font-medium text-accent-ink transition-colors hover:bg-accent-bright"
+                    className="shine glass-accent inline-flex items-center gap-3 rounded-full py-2 pr-2 pl-6 text-[15px] font-medium transition-transform duration-300 hover:-translate-y-0.5"
                   >
                     Open the demo
-                    <ArrowUpRight />
+                    <ArrowCircle className="size-9" />
                   </a>
                 </Magnetic>
                 <p className="inline-flex items-center gap-2.5 font-mono text-[11px] tracking-[0.18em] text-muted uppercase">
@@ -49,10 +49,10 @@ export function LiveDemo() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open the live demo"
-              className="group block overflow-hidden rounded-2xl border border-line-strong bg-surface shadow-2xl shadow-black/50 transition-transform duration-500 hover:-translate-y-1.5"
+              className="glass group block overflow-hidden rounded-2xl !shadow-2xl !shadow-black/50 transition-transform duration-500 hover:-translate-y-1.5"
             >
               {/* browser chrome */}
-              <span className="flex items-center gap-3.5 border-b border-line bg-bg-deep/70 px-5 py-3.5">
+              <span className="flex items-center gap-3.5 border-b border-line bg-bg-deep/60 px-5 py-3.5">
                 <span className="flex gap-1.5">
                   <span className="size-2.5 rounded-full bg-[#ff5f57]" />
                   <span className="size-2.5 rounded-full bg-[#febc2e]" />

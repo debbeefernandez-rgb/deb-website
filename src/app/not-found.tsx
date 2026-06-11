@@ -9,16 +9,16 @@ export default function NotFound() {
         <span className="mx-3 text-faint">/</span>
         Not here
       </p>
-      <h1 className="mt-6 text-[clamp(2.6rem,7vw,5.5rem)] leading-[1] font-semibold tracking-[-0.04em]">
+      <h1 className="display mt-6 text-[clamp(2.6rem,7vw,5.5rem)] leading-[1]">
         This page never{" "}
-        <span className="serif-italic text-accent">shipped.</span>
+        <span className="text-glint">shipped.</span>
       </h1>
       <p className="mt-6 max-w-[40ch] text-[16px] leading-relaxed text-muted">
         Everything I actually ship is one click away. The dogs ate this URL.
       </p>
       <div className="mt-9 flex flex-wrap justify-center gap-4">
         <Button href="/">Back home</Button>
-        <Button href="/work" variant="ghost">
+        <Button href="/work" variant="glass">
           See the work
         </Button>
       </div>

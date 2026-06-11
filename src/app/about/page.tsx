@@ -38,11 +38,11 @@ export default function AboutPage() {
             The person behind the work
           </p>
         </Reveal>
-        <h1 className="mt-6 text-[clamp(3rem,8vw,7rem)] leading-[0.98] font-semibold tracking-[-0.04em]">
+        <h1 className="display mt-6 text-[clamp(3rem,8vw,7rem)] leading-[0.98]">
           <RevealLines
             lines={[
               <span key="1">
-                Hey, I&apos;m <span className="serif-italic text-accent">Deb.</span>
+                Hey, I&apos;m <span className="text-glint">Deb.</span>
               </span>,
             ]}
           />
@@ -126,7 +126,7 @@ export default function AboutPage() {
                 {tools.map((t) => (
                   <span
                     key={t}
-                    className="rounded-full border border-line bg-surface px-3.5 py-1.5 font-mono text-[11px] tracking-[0.08em] text-fg/90 uppercase"
+                    className="glass rounded-full px-3.5 py-1.5 font-mono text-[11px] tracking-[0.08em] text-fg/90 uppercase"
                   >
                     {t}
                   </span>
@@ -138,7 +138,7 @@ export default function AboutPage() {
           <Reveal delay={0.2}>
             <div className="mt-2 flex flex-wrap gap-4">
               <Button href="/contact">Start a project</Button>
-              <Button href="/work" variant="ghost">
+              <Button href="/work" variant="glass">
                 See the work
               </Button>
             </div>
@@ -195,11 +195,11 @@ export default function AboutPage() {
                 Hyrox
               </p>
             </Reveal>
-            <h2 className="mt-5 text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05] font-semibold tracking-[-0.03em]">
+            <h2 className="display mt-5 text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05]">
               <RevealLines
                 lines={[
                   "Same muscles,",
-                  <span key="2" className="serif-italic text-accent">
+                  <span key="2" className="text-glint">
                     different sport.
                   </span>,
                 ]}
@@ -253,12 +253,12 @@ export default function AboutPage() {
                 The board of directors
               </p>
             </Reveal>
-            <h2 className="mt-5 text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05] font-semibold tracking-[-0.03em]">
+            <h2 className="display mt-5 text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05]">
               <RevealLines
                 lines={[
                   "Why is this site",
                   <span key="2">
-                    <span className="serif-italic text-accent">brown?</span>{" "}
+                    <span className="text-glint">brown?</span>{" "}
                     Three reasons.
                   </span>,
                 ]}
@@ -279,7 +279,7 @@ export default function AboutPage() {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="mt-7 rounded-2xl border border-accent/30 bg-accent-tint p-6">
+              <div className="glass-accent mt-7 rounded-2xl p-6">
                 <p className="eyebrow text-accent-bright">Trust note</p>
                 <p className="mt-3 text-[15px] leading-relaxed">
                   You&apos;re hiring a person, not a process. Real name, real
@@ -334,7 +334,7 @@ export default function AboutPage() {
               <span className="mx-3 text-faint">/</span>
               Case study zero
             </p>
-            <h2 className="mt-5 max-w-[24ch] text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight font-semibold tracking-[-0.025em]">
+            <h2 className="display mt-5 max-w-[24ch] text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight">
               This site is the proof. I built it the way I&apos;ll build
               yours.
             </h2>

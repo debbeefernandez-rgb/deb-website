@@ -1,7 +1,10 @@
 import type { ReactNode } from "react";
 import { Reveal, RevealLines } from "./reveal";
 
-/* Standard section opener: numbered mono eyebrow + masked headline + optional lede. */
+/*
+  Section opener: a huge hollow numeral behind a heavy display headline.
+  Headlines accept a .text-glint span for the gradient accent.
+*/
 export function SectionHeading({
   index,
   eyebrow,
@@ -17,21 +20,28 @@ export function SectionHeading({
 }) {
   const centered = align === "center";
   return (
-    <div className={centered ? "text-center" : ""}>
+    <div className={`relative ${centered ? "text-center" : ""}`}>
+      <span
+        aria-hidden
+        className={`outline-num pointer-events-none absolute -top-[0.52em] text-[clamp(5.5rem,12vw,10rem)] leading-none opacity-70 ${
+          centered ? "left-1/2 -translate-x-1/2" : "-left-2"
+        }`}
+      >
+        {index}
+      </span>
       <Reveal>
-        <p className="eyebrow">
-          <span className="text-accent">{index}</span>
-          <span className="mx-3 text-faint">/</span>
+        <p className="eyebrow relative pt-10">
+          <span className="mr-2.5 inline-block size-1.5 rounded-full bg-accent align-middle" />
           {eyebrow}
         </p>
       </Reveal>
-      <h2 className="mt-5 text-[clamp(2.2rem,5vw,4rem)] leading-[1.04] font-semibold tracking-[-0.03em]">
+      <h2 className="display relative mt-5 text-[clamp(2.3rem,5.2vw,4.2rem)] leading-[1.02]">
         <RevealLines lines={lines} />
       </h2>
       {lede && (
         <Reveal delay={0.15}>
           <p
-            className={`mt-5 max-w-[56ch] text-[17px] leading-relaxed text-muted ${centered ? "mx-auto" : ""}`}
+            className={`relative mt-5 max-w-[56ch] text-[17px] leading-relaxed text-muted ${centered ? "mx-auto" : ""}`}
           >
             {lede}
           </p>

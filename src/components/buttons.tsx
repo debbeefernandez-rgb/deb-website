@@ -3,12 +3,15 @@ import type { ReactNode } from "react";
 import { Magnetic } from "./magnetic";
 
 const base =
-  "inline-flex items-center justify-center gap-2.5 rounded-full text-[15px] font-medium transition-colors duration-200";
+  "shine inline-flex items-center justify-center gap-2.5 rounded-full text-[15px] font-medium transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5";
 
 const variants = {
-  primary: `${base} bg-accent px-7 py-3.5 text-accent-ink hover:bg-accent-bright`,
-  ghost: `${base} border border-line-strong px-7 py-3.5 text-fg hover:border-accent hover:text-accent-bright`,
-  cream: `${base} bg-cream-ink px-7 py-3.5 text-cream hover:bg-black`,
+  /* warm glass with the accent glow, the main CTA */
+  primary: `${base} glass-accent px-7 py-3.5 text-fg`,
+  /* neutral mirror glass */
+  glass: `${base} glass px-7 py-3.5 text-fg hover:border-line-strong`,
+  /* solid dark pill used on cream surfaces */
+  dark: `${base} bg-cream-ink px-7 py-3.5 text-cream shadow-xl shadow-black/30`,
 };
 
 export function Button({
@@ -41,6 +44,18 @@ export function Button({
     </Link>
   );
   return magnetic ? <Magnetic>{link}</Magnetic> : link;
+}
+
+/* small filled circle holding an arrow, rides inside pill buttons */
+export function ArrowCircle({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`flex size-7 items-center justify-center rounded-full bg-accent text-accent-ink shadow-[0_4px_14px_var(--accent-glow)] ${className}`}
+      aria-hidden
+    >
+      <Arrow className="size-3.5" />
+    </span>
+  );
 }
 
 export function Arrow({ className = "size-4" }: { className?: string }) {

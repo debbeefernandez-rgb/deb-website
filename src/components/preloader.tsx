@@ -54,8 +54,8 @@ export function Preloader() {
                 transition={{ duration: 0.26, ease: [0.21, 0.7, 0.2, 1] }}
                 className={
                   index === WORDS.length - 1
-                    ? "text-5xl font-bold tracking-[-0.04em] text-fg sm:text-6xl"
-                    : "serif-italic text-5xl text-muted sm:text-6xl"
+                    ? "display text-5xl text-fg sm:text-6xl"
+                    : "display text-5xl text-muted sm:text-6xl"
                 }
               >
                 {index === WORDS.length - 1 ? (

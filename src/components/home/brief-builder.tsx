@@ -67,7 +67,7 @@ export function BriefBuilder() {
           lines={[
             "Build your brief",
             <span key="2">
-              in <span className="serif-italic text-accent">30 seconds.</span>
+              in <span className="text-glint">30 seconds.</span>
             </span>,
           ]}
           lede="Pick what you need, set the pace, and send it. No forms, no funnel, no sales call required."
@@ -268,7 +268,7 @@ export function BriefBuilder() {
               </div>
 
               {summary && (
-                <p className="serif-italic mt-4 text-[15px] leading-relaxed opacity-75">
+                <p className="mt-4 border-l-2 border-cream-ink/25 pl-3 text-[14px] leading-relaxed font-medium opacity-75">
                   &ldquo;{summary}&rdquo;
                 </p>
               )}

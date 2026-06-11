@@ -21,11 +21,11 @@ export default function ContactPage() {
             Two ways in, both fast
           </p>
         </Reveal>
-        <h1 className="mt-6 text-[clamp(3rem,8vw,7rem)] leading-[0.98] font-semibold tracking-[-0.04em]">
+        <h1 className="display mt-6 text-[clamp(3rem,8vw,7rem)] leading-[0.98]">
           <RevealLines
             lines={[
               "Let's do the",
-              <span key="2" className="serif-italic text-accent">
+              <span key="2" className="text-glint">
                 damn thing.
               </span>,
             ]}
@@ -44,7 +44,7 @@ export default function ContactPage() {
               href={site.calendly}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block h-full rounded-2xl border border-accent/40 bg-accent-tint p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/70"
+              className="shine glass-accent group block h-full rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
             >
               <span className="flex items-center justify-between">
                 <span className="eyebrow text-accent-bright">
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 </span>
                 <ArrowUpRight className="size-5 text-accent transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </span>
-              <span className="mt-5 block text-[clamp(1.7rem,3vw,2.2rem)] font-semibold tracking-[-0.025em]">
+              <span className="display mt-5 block text-[clamp(1.7rem,3vw,2.2rem)]">
                 Book a 15.
               </span>
               <span className="mt-3 block text-[15px] leading-relaxed text-muted">
@@ -68,13 +68,13 @@ export default function ContactPage() {
           <Reveal delay={0.18}>
             <a
               href={`mailto:${site.email}`}
-              className="group block h-full rounded-2xl border border-line bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-line-strong"
+              className="shine glass group block h-full rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
             >
               <span className="flex items-center justify-between">
                 <span className="eyebrow">Direct</span>
                 <ArrowUpRight className="size-5 text-faint transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </span>
-              <span className="mt-5 block text-[clamp(1.7rem,3vw,2.2rem)] font-semibold tracking-[-0.025em]">
+              <span className="display mt-5 block text-[clamp(1.7rem,3vw,2.2rem)]">
                 Just email.
               </span>
               <span className="mt-3 block text-[15px] leading-relaxed text-muted">
@@ -100,7 +100,7 @@ export default function ContactPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/#brief"
-                className="rounded-full border border-line-strong px-5 py-2.5 text-[14px] font-medium transition-colors hover:border-accent"
+                className="glass shine rounded-full px-5 py-2.5 text-[14px] font-medium transition-transform duration-300 hover:-translate-y-0.5"
               >
                 Brief builder
               </Link>
@@ -108,7 +108,7 @@ export default function ContactPage() {
                 href={site.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-line-strong px-5 py-2.5 text-[14px] font-medium transition-colors hover:border-accent"
+                className="glass shine rounded-full px-5 py-2.5 text-[14px] font-medium transition-transform duration-300 hover:-translate-y-0.5"
               >
                 Instagram
               </a>

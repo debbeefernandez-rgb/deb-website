@@ -13,11 +13,17 @@ export const site = {
   availability: "Booking new projects",
 };
 
-export const stats = [
-  { value: 5, suffix: " yrs", label: "Building for funded teams" },
-  { value: 40, suffix: "+", label: "Projects delivered" },
-  { value: 5, suffix: "", label: "AI products in production" },
-  { value: 2000, suffix: "+", label: "Designs shipped" },
+export const stats: {
+  value: number;
+  suffix: string;
+  label: string;
+  size: number;
+  big?: boolean;
+}[] = [
+  { value: 5, suffix: " yrs", label: "Building for funded teams", size: 150 },
+  { value: 40, suffix: "+", label: "Projects delivered", size: 175 },
+  { value: 2000, suffix: "+", label: "Designs shipped", size: 235, big: true },
+  { value: 5, suffix: "", label: "AI products in production", size: 185 },
 ];
 
 export const tools = [

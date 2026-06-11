@@ -20,6 +20,7 @@
   --accent-deep: oklch(0.56 0.1 55);
   --accent-ink: #1c140d;
   --accent-tint: oklch(0.76 0.09 62 / 0.12);
+  --accent-glow: oklch(0.66 0.13 58 / 0.45);
 
   --cream: #f7f0e4;
   --cream-ink: #1b140f;
@@ -31,6 +32,7 @@ html[data-accent="pink"] {
   --accent-deep: oklch(0.58 0.13 355);
   --accent-ink: #1c0d12;
   --accent-tint: oklch(0.78 0.11 0 / 0.12);
+  --accent-glow: oklch(0.68 0.14 0 / 0.45);
 }
 
 html[data-accent="plum"] {
@@ -39,6 +41,7 @@ html[data-accent="plum"] {
   --accent-deep: oklch(0.54 0.12 315);
   --accent-ink: #160d1c;
   --accent-tint: oklch(0.74 0.1 320 / 0.12);
+  --accent-glow: oklch(0.64 0.13 318 / 0.45);
 }
 
 @theme inline {
@@ -61,7 +64,7 @@ html[data-accent="plum"] {
 
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
-  --font-serif: var(--font-instrument), Georgia, serif;
+  --font-display: var(--font-bricolage), var(--font-geist), sans-serif;
 }
 
 * {
@@ -97,7 +100,14 @@ p {
   text-wrap: pretty;
 }
 
-/* mono eyebrow label used across every section */
+/* display type: Bricolage, heavy, tight */
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* mono eyebrow label */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -107,11 +117,21 @@ p {
   color: var(--muted);
 }
 
-.serif-italic {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+/* gradient headline accent, replaces italics */
+.text-glint {
+  background: linear-gradient(100deg, var(--accent) 0%, var(--accent-bright) 55%, var(--fg) 115%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* huge hollow numerals used as section markers */
+.outline-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border-strong);
+  user-select: none;
 }
 
 /* underline link used in body copy */
@@ -125,6 +145,128 @@ p {
 
 .link:hover {
   text-decoration-color: var(--accent);
+}
+
+/* ---------- glass system ---------- */
+
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.22);
+}
+
+.glass-accent {
+  background: linear-gradient(160deg, oklch(0.76 0.09 62 / 0.34), oklch(0.62 0.1 55 / 0.14));
+  background: linear-gradient(160deg, color-mix(in oklch, var(--accent) 34%, transparent), color-mix(in oklch, var(--accent-deep) 16%, transparent));
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  border: 1px solid color-mix(in oklch, var(--accent-bright) 42%, transparent);
+  box-shadow:
+    0 14px 44px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* accent glass with a dark base, stays readable over light surfaces */
+.glass-dark {
+  background:
+    linear-gradient(160deg, color-mix(in oklch, var(--accent) 30%, transparent), color-mix(in oklch, var(--accent-deep) 14%, transparent)),
+    rgba(11, 9, 8, 0.62);
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  border: 1px solid color-mix(in oklch, var(--accent-bright) 38%, transparent);
+  box-shadow:
+    0 10px 36px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+/* mirror gleam that sweeps across on hover */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: -40% auto;
+  left: -70%;
+  width: 55%;
+  transform: skewX(-22deg) translateX(0);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.16) 45%,
+    rgba(255, 255, 255, 0.34) 50%,
+    rgba(255, 255, 255, 0.16) 55%,
+    transparent
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.shine:hover::after {
+  opacity: 1;
+  animation: shine-sweep 0.85s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
+}
+
+@keyframes shine-sweep {
+  to {
+    transform: skewX(-22deg) translateX(420%);
+  }
+}
+
+/* cursor-tracking spotlight surface; --mx/--my set from JS */
+.spot {
+  position: relative;
+}
+
+.spot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    280px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.07),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.spot:hover::before {
+  opacity: 1;
+}
+
+/* ---------- atmosphere ---------- */
+
+/* slow-breathing warm aurora used behind the hero */
+.aurora {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background:
+    radial-gradient(42% 46% at 18% 22%, var(--accent-tint) 0%, transparent 65%),
+    radial-gradient(36% 42% at 85% 12%, oklch(0.42 0.1 320 / 0.13) 0%, transparent 70%),
+    radial-gradient(50% 55% at 75% 90%, color-mix(in oklch, var(--accent-deep) 14%, transparent) 0%, transparent 70%);
+  animation: aurora-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(2%, 2%, 0) scale(1.06);
+  }
 }
 
 /* film grain overlay */
@@ -147,11 +289,6 @@ p {
   80% { transform: translate(4%, 4%); }
 }
 
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.45; transform: scale(1.35); }
@@ -162,21 +299,23 @@ p {
   50%, 100% { opacity: 0; }
 }
 
-.animate-marquee {
-  animation: marquee var(--marquee-duration, 36s) linear infinite;
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes orbit-spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .marquee-mask {
   mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
 }
 
-.group\/marquee:hover .animate-marquee {
-  animation-play-state: paused;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .grain::before,
-  .animate-marquee {
+  .aurora,
+  .shine::after {
     animation: none !important;
   }
 }

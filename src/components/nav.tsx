@@ -16,7 +16,7 @@ const links = [
 export function Logo() {
   const { cycleAccent } = useAccent();
   return (
-    <span className="inline-flex items-baseline text-[26px] font-bold tracking-[-0.04em]">
+    <span className="display inline-flex items-baseline text-[26px]">
       <Link href="/" aria-label="deb, home" className="text-fg">
         deb
       </Link>
@@ -56,55 +56,57 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-60 transition-[background-color,border-color,backdrop-filter] duration-300 ${
-        scrolled && !open
-          ? "border-b border-line bg-bg/75 backdrop-blur-xl"
-          : "border-b border-transparent"
-      }`}
-    >
-      <div className="mx-auto flex h-[72px] max-w-300 items-center justify-between px-5 sm:px-7">
+    <header className="fixed inset-x-0 top-0 z-60">
+      <div className="mx-auto flex h-[76px] max-w-300 items-center justify-between px-5 sm:px-7">
         <Logo />
 
-        {/* desktop */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-          {links.map((l) => {
-            const active = pathname.startsWith(l.href);
-            return (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`relative text-[14px] transition-colors ${
-                  active ? "text-fg" : "text-muted hover:text-fg"
-                }`}
-              >
-                {l.label}
-                {active && (
-                  <span className="absolute inset-x-0 -bottom-1.5 h-px bg-accent" />
-                )}
-              </Link>
-            );
-          })}
-          <a
-            href={site.blog}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[14px] text-muted transition-colors hover:text-fg"
+        {/* desktop: links live in a floating glass pill */}
+        <nav className="hidden items-center gap-2.5 md:flex" aria-label="Primary">
+          <div
+            className={`flex items-center gap-1 rounded-full p-1.5 transition-[background-color,border-color,box-shadow] duration-300 ${
+              scrolled
+                ? "border border-line-strong bg-bg/72 shadow-xl shadow-black/30 backdrop-blur-xl"
+                : "border border-transparent"
+            }`}
           >
-            Blog
-          </a>
-          <button
-            type="button"
-            onClick={() =>
-              window.dispatchEvent(new CustomEvent("deb:command-menu"))
-            }
-            className="hidden cursor-pointer items-center gap-2 rounded-full border border-line-strong px-3.5 py-1.5 font-mono text-[11px] tracking-[0.08em] text-muted transition-colors hover:border-accent hover:text-fg lg:inline-flex"
-          >
-            <kbd>⌘K</kbd>
-          </button>
+            {links.map((l) => {
+              const active = pathname.startsWith(l.href);
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className={`rounded-full px-4 py-2 text-[13.5px] transition-colors duration-200 ${
+                    active
+                      ? "bg-fg/10 text-fg"
+                      : "text-muted hover:bg-fg/5 hover:text-fg"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
+            <a
+              href={site.blog}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full px-4 py-2 text-[13.5px] text-muted transition-colors duration-200 hover:bg-fg/5 hover:text-fg"
+            >
+              Blog
+            </a>
+            <button
+              type="button"
+              onClick={() =>
+                window.dispatchEvent(new CustomEvent("deb:command-menu"))
+              }
+              aria-label="Open command menu"
+              className="hidden cursor-pointer rounded-full px-3 py-2 font-mono text-[11px] tracking-[0.08em] text-faint transition-colors duration-200 hover:bg-fg/5 hover:text-fg lg:block"
+            >
+              ⌘K
+            </button>
+          </div>
           <Link
             href="/contact"
-            className="rounded-full bg-accent px-5 py-2 text-[14px] font-medium text-accent-ink transition-colors hover:bg-accent-bright"
+            className="shine glass-dark rounded-full px-5 py-2.5 text-[13.5px] font-medium text-fg transition-transform duration-300 hover:-translate-y-0.5"
           >
             Start a project
           </Link>
@@ -116,13 +118,13 @@ export function Nav() {
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="relative z-70 flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 md:hidden"
+          className="glass-dark relative z-70 flex size-11 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-full md:hidden"
         >
           <span
-            className={`h-px w-6 bg-fg transition-transform duration-300 ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+            className={`h-px w-5 bg-fg transition-transform duration-300 ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
           />
           <span
-            className={`h-px w-6 bg-fg transition-transform duration-300 ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+            className={`h-px w-5 bg-fg transition-transform duration-300 ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
           />
         </button>
       </div>
@@ -149,7 +151,7 @@ export function Nav() {
                   <Link
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="serif-italic block py-2 text-5xl text-fg"
+                    className="display block py-2 text-5xl text-fg"
                   >
                     {l.label}
                   </Link>
@@ -164,7 +166,7 @@ export function Nav() {
                   href={site.blog}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="serif-italic block py-2 text-5xl text-muted"
+                  className="display block py-2 text-5xl text-muted"
                 >
                   Blog
                 </a>

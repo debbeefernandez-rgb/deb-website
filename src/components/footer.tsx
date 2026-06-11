@@ -3,9 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
-import { Reveal, RevealLines } from "./reveal";
 import { ArrowUpRight } from "./buttons";
-import { Magnetic } from "./magnetic";
+import { Logo } from "./nav";
 
 function ManilaClock() {
   const [time, setTime] = useState("--:--:--");
@@ -18,9 +17,12 @@ function ManilaClock() {
       hour12: false,
     });
     const tick = () => setTime(fmt.format(new Date()));
-    tick();
+    const raf = requestAnimationFrame(tick);
     const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearInterval(id);
+    };
   }, []);
   return <span className="tabular-nums">{time}</span>;
 }
@@ -29,61 +31,15 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative overflow-hidden border-t border-line bg-bg-deep">
-      {/* warm floor glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-1/2 left-1/2 h-[60rem] w-[90rem] -translate-x-1/2 rounded-full opacity-60"
-        style={{
-          background:
-            "radial-gradient(ellipse, var(--accent-tint) 0%, transparent 60%)",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-300 px-5 pt-24 pb-10 sm:px-7 sm:pt-32">
-        <p className="eyebrow">
-          <span className="text-accent">Next step</span>
-        </p>
-        <h2 className="mt-6 text-[clamp(3rem,9vw,8.5rem)] leading-[0.95] font-semibold tracking-[-0.04em]">
-          <RevealLines
-            lines={[
-              <span key="1">Got something</span>,
-              <span key="2">
-                to <span className="serif-italic text-accent">build?</span>
-              </span>,
-            ]}
-          />
-        </h2>
-        <Reveal delay={0.2}>
-          <p className="mt-7 max-w-[46ch] text-[17px] leading-relaxed text-muted">
-            Tell me what you have in mind. I reply within 24 hours and I will
-            tell you straight if I am the right person for it.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.3}>
-          <div className="mt-10 flex flex-wrap items-center gap-5">
-            <Magnetic>
-              <a
-                href={site.calendly}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 text-[16px] font-medium text-accent-ink transition-colors hover:bg-accent-bright"
-              >
-                Book a 15 minute call
-                <ArrowUpRight />
-              </a>
-            </Magnetic>
-            <a
-              href={`mailto:${site.email}`}
-              className="link font-mono text-[14px] tracking-[0.04em]"
-            >
-              {site.email}
-            </a>
+      <div className="relative mx-auto max-w-300 px-5 pt-16 pb-10 sm:px-7">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-5">
+          <div className="col-span-2 md:col-span-1">
+            <Logo />
+            <p className="mt-4 max-w-[26ch] text-[13.5px] leading-relaxed text-muted">
+              Product developer and designer. One person, idea to live
+              product.
+            </p>
           </div>
-        </Reveal>
-
-        {/* meta grid */}
-        <div className="mt-24 grid grid-cols-2 gap-x-6 gap-y-10 border-t border-line pt-10 md:grid-cols-4">
           <div>
             <p className="eyebrow">Pages</p>
             <ul className="mt-4 space-y-2.5 text-[14px]">
@@ -111,16 +67,19 @@ export function Footer() {
                 { href: site.instagram, label: "Instagram" },
                 { href: site.blog, label: "Blog" },
                 { href: site.liveDemo, label: "Live demo" },
+                { href: `mailto:${site.email}`, label: "Email" },
               ].map((l) => (
-                <li key={l.href}>
+                <li key={l.label}>
                   <a
                     href={l.href}
-                    target="_blank"
+                    target={l.href.startsWith("http") ? "_blank" : undefined}
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-muted transition-colors hover:text-fg"
                   >
                     {l.label}
-                    <ArrowUpRight className="size-3 opacity-60" />
+                    {l.href.startsWith("http") && (
+                      <ArrowUpRight className="size-3 opacity-60" />
+                    )}
                   </a>
                 </li>
               ))}
@@ -137,11 +96,11 @@ export function Footer() {
           </div>
           <div>
             <p className="eyebrow">Status</p>
-            <p className="mt-4 flex items-center gap-2.5 text-[14px] text-muted">
+            <p className="glass mt-4 inline-flex items-center gap-2.5 rounded-full px-4 py-2 text-[13px] text-muted">
               <span className="inline-block size-2 animate-[pulse-dot_1.8s_ease-in-out_infinite] rounded-full bg-accent" />
               {site.availability}
             </p>
-            <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-faint uppercase">
+            <p className="mt-2.5 font-mono text-[11px] tracking-[0.14em] text-faint uppercase">
               Replies within 24h
             </p>
           </div>

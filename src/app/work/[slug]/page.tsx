@@ -70,7 +70,7 @@ export default async function CaseStudyPage({
                 {project.category} · {project.year}
               </p>
             </Reveal>
-            <h1 className="mt-5 text-[clamp(2.6rem,6vw,4.8rem)] leading-[1.02] font-semibold tracking-[-0.035em]">
+            <h1 className="display mt-5 text-[clamp(2.6rem,6vw,4.8rem)] leading-[1.02]">
               <RevealLines lines={[project.title]} />
             </h1>
             <Reveal delay={0.15}>
@@ -80,9 +80,9 @@ export default async function CaseStudyPage({
             </Reveal>
           </div>
           <Reveal delay={0.2}>
-            <p className="rounded-2xl border border-accent/30 bg-accent-tint px-6 py-5">
+            <p className="glass-accent rounded-2xl px-6 py-5">
               <span className="eyebrow block">Outcome</span>
-              <span className="mt-2 block text-[clamp(1.3rem,2.4vw,1.7rem)] font-semibold tracking-[-0.02em] text-accent-bright">
+              <span className="display mt-2 block text-[clamp(1.3rem,2.4vw,1.7rem)] text-fg">
                 {project.outcome}
               </span>
             </p>
@@ -127,7 +127,7 @@ export default async function CaseStudyPage({
                 {project.stack.map((t) => (
                   <span
                     key={t}
-                    className="rounded-full border border-line px-2.5 py-1 font-mono text-[10.5px] tracking-[0.08em] text-muted uppercase"
+                    className="glass rounded-full px-2.5 py-1 font-mono text-[10.5px] tracking-[0.08em] text-muted uppercase"
                   >
                     {t}
                   </span>
@@ -161,11 +161,11 @@ export default async function CaseStudyPage({
         <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
           {project.highlights.map((h, i) => (
             <Reveal key={h.heading} delay={i * 0.08}>
-              <div className="h-full rounded-2xl border border-line bg-surface p-8">
+              <div className="glass h-full rounded-2xl p-8">
                 <p className="font-mono text-[12px] text-accent">
                   {String(i + 1).padStart(2, "0")}
                 </p>
-                <h2 className="mt-4 text-[20px] font-semibold tracking-[-0.015em]">
+                <h2 className="display mt-4 text-[20px]">
                   {h.heading}
                 </h2>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted">
@@ -180,7 +180,7 @@ export default async function CaseStudyPage({
         <Reveal>
           <div className="mt-20 flex flex-wrap items-center justify-between gap-8 rounded-2xl border border-line bg-bg-deep p-8 sm:p-10">
             <div>
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold tracking-[-0.02em]">
+              <h2 className="display text-[clamp(1.5rem,3vw,2rem)]">
                 Need something like this?
               </h2>
               <p className="mt-2 max-w-[44ch] text-[15px] text-muted">
@@ -199,7 +199,7 @@ export default async function CaseStudyPage({
           >
             <span>
               <span className="eyebrow block">Next project</span>
-              <span className="mt-2 block text-[clamp(1.4rem,3vw,2.2rem)] font-semibold tracking-[-0.02em] transition-transform duration-300 group-hover:translate-x-1.5">
+              <span className="display mt-2 block text-[clamp(1.4rem,3vw,2.2rem)] transition-transform duration-300 group-hover:translate-x-1.5">
                 {next.title}
               </span>
             </span>

@@ -73,7 +73,7 @@ export function Manifesto() {
         <p className="eyebrow">
           <span className="text-accent">The short version</span>
         </p>
-        <h2 className="mt-10 text-[clamp(2.4rem,7.5vw,6.5rem)] leading-[1.04] font-semibold tracking-[-0.04em]">
+        <h2 className="display mt-10 text-[clamp(2.4rem,7.5vw,6.5rem)] leading-[1.04]">
           {reduce ? (
             LINES.map((l) => (
               <span key={l} className="block text-fg">
@@ -88,7 +88,7 @@ export function Manifesto() {
             </>
           )}
         </h2>
-        <p className="serif-italic mx-auto mt-10 max-w-[40ch] text-[20px] text-muted sm:text-[22px]">
+        <p className="mx-auto mt-10 max-w-[44ch] text-[18px] leading-relaxed text-muted sm:text-[20px]">
           A designer&apos;s taste with an engineer&apos;s leverage. That used to
           take a team. Now it takes me and a very good AI.
         </p>

@@ -20,7 +20,7 @@ export function Faq() {
               lines={[
                 "The questions",
                 <span key="2">
-                  you <span className="serif-italic text-accent">should ask.</span>
+                  you <span className="text-glint">should ask.</span>
                 </span>,
               ]}
               lede="Including the awkward one about my background. Ask me anything else on a call."

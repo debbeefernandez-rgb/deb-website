@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
 import { SectionHeading } from "@/components/section-heading";
-import { WorkList } from "@/components/work-list";
+import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/buttons";
 
@@ -16,25 +16,29 @@ export default function WorkPage() {
     <div className="pt-36 pb-28 sm:pb-36">
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <SectionHeading
-          index="Work"
+          index="01"
           eyebrow="The receipts"
           lines={[
             "Shipped,",
             <span key="2">
-              not <span className="serif-italic text-accent">staged.</span>
+              not <span className="text-glint">staged.</span>
             </span>,
           ]}
-          lede="Every project here went live and did its job. Outcomes are listed next to each one, ask me about any of them on a call."
+          lede="Every project here went live and did its job. The screenshots are the actual builds. Outcomes sit on each card, ask me about any of them on a call."
         />
 
-        <div className="mt-16">
-          <WorkList projects={projects} />
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {projects.map((p, i) => (
+            <Reveal key={p.slug} delay={Math.min((i % 2) * 0.08, 0.2)} className="h-full">
+              <ProjectCard project={p} priority={i < 2} />
+            </Reveal>
+          ))}
         </div>
 
         <Reveal delay={0.15}>
-          <div className="mt-16 flex flex-wrap items-center gap-5 rounded-2xl border border-line bg-surface p-8 sm:p-10">
+          <div className="glass mt-16 flex flex-wrap items-center gap-5 rounded-2xl p-8 sm:p-10">
             <div className="grow">
-              <h2 className="text-[22px] font-semibold tracking-[-0.02em]">
+              <h2 className="display text-[22px]">
                 Your project could be number seven.
               </h2>
               <p className="mt-2 max-w-[48ch] text-[15px] text-muted">

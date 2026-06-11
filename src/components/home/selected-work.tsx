@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import { SectionHeading } from "../section-heading";
-import { WorkList } from "../work-list";
+import { ProjectCard } from "../project-card";
 import { Reveal } from "../reveal";
 import { Arrow } from "../buttons";
 
@@ -13,8 +13,13 @@ export function SelectedWork() {
           <SectionHeading
             index="01"
             eyebrow="Selected work"
-            lines={["Real products,", "real results."]}
-            lede="Six projects that shipped and did their job. Open any of them for the full story."
+            lines={[
+              "Real builds,",
+              <span key="2">
+                real <span className="text-glint">results.</span>
+              </span>,
+            ]}
+            lede="Six projects that shipped and did their job. These are actual screenshots of things I made, not mockups."
           />
           <Reveal delay={0.2}>
             <Link
@@ -27,8 +32,12 @@ export function SelectedWork() {
           </Reveal>
         </div>
 
-        <div className="mt-14">
-          <WorkList projects={projects} />
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {projects.map((p, i) => (
+            <Reveal key={p.slug} delay={Math.min((i % 2) * 0.08, 0.2)} className="h-full">
+              <ProjectCard project={p} priority={i < 2} />
+            </Reveal>
+          ))}
         </div>
 
         <Reveal className="mt-10 sm:hidden">

@@ -1,11 +1,12 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion, useReducedMotion } from "motion/react";
+import Link from "next/link";
 import { site } from "@/lib/site";
 import { Scramble } from "../scramble";
 import { Magnetic } from "../magnetic";
-import { ArrowUpRight } from "../buttons";
-import Link from "next/link";
+import { ArrowCircle } from "../buttons";
 
 const EASE = [0.21, 0.7, 0.2, 1] as const;
 
@@ -31,6 +32,85 @@ function Line({
   );
 }
 
+/* Two soft orbs chase the cursor with a lazy trail, mirrored corners. */
+function CursorOrbs() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const orb1 = useRef<HTMLDivElement>(null);
+  const orb2 = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const section = orb1.current?.parentElement as HTMLElement | null;
+    sectionRef.current = section;
+    if (!section) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
+    let rect = section.getBoundingClientRect();
+    let tx = rect.width * 0.6;
+    let ty = rect.height * 0.4;
+    let cx = tx;
+    let cy = ty;
+    let raf = 0;
+
+    const tick = () => {
+      cx += (tx - cx) * 0.07;
+      cy += (ty - cy) * 0.07;
+      if (orb1.current) {
+        orb1.current.style.transform = `translate3d(${cx - 380}px, ${cy - 380}px, 0)`;
+      }
+      if (orb2.current) {
+        orb2.current.style.transform = `translate3d(${rect.width - cx - 300}px, ${rect.height - cy - 300}px, 0)`;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+
+    const onMove = (e: MouseEvent) => {
+      rect = section.getBoundingClientRect();
+      tx = e.clientX - rect.left;
+      ty = e.clientY - rect.top;
+    };
+    const onLeave = () => {
+      tx = rect.width * 0.6;
+      ty = rect.height * 0.4;
+    };
+    section.addEventListener("mousemove", onMove, { passive: true });
+    section.addEventListener("mouseleave", onLeave);
+    return () => {
+      cancelAnimationFrame(raf);
+      section.removeEventListener("mousemove", onMove);
+      section.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
+
+  return (
+    <>
+      <div
+        ref={orb1}
+        aria-hidden
+        className="pointer-events-none absolute top-0 left-0 size-[760px]"
+        style={{
+          background:
+            "radial-gradient(circle, var(--accent-glow) 0%, color-mix(in oklch, var(--accent-deep) 22%, transparent) 30%, transparent 62%)",
+          willChange: "transform",
+          transform: "translate3d(-380px, -380px, 0)",
+        }}
+      />
+      <div
+        ref={orb2}
+        aria-hidden
+        className="pointer-events-none absolute top-0 left-0 size-[600px]"
+        style={{
+          background:
+            "radial-gradient(circle, oklch(0.45 0.12 320 / 0.3) 0%, transparent 64%)",
+          willChange: "transform",
+          transform: "translate3d(-300px, -300px, 0)",
+        }}
+      />
+    </>
+  );
+}
+
 export function Hero() {
   const reduce = useReducedMotion();
   const fade = (delay: number) => ({
@@ -41,41 +121,23 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-svh items-center overflow-hidden">
-      {/* ambient warmth, fixed corners */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 -left-40 size-[42rem] rounded-full opacity-70"
-        style={{
-          background:
-            "radial-gradient(circle, var(--accent-tint) 0%, transparent 62%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-60 -bottom-60 size-[46rem] rounded-full opacity-50"
-        style={{
-          background:
-            "radial-gradient(circle, oklch(0.4 0.09 320 / 0.16) 0%, transparent 62%)",
-        }}
-      />
+      <div className="aurora" aria-hidden />
+      <CursorOrbs />
 
-      <div className="relative mx-auto w-full max-w-300 px-5 pt-32 pb-20 sm:px-7">
-        <motion.p
-          {...fade(0.1)}
-          className="flex flex-wrap items-center gap-2.5 font-mono text-[11px] tracking-[0.2em] text-muted uppercase"
-        >
-          <span className="inline-block size-2 animate-[pulse-dot_1.8s_ease-in-out_infinite] rounded-full bg-accent" />
-          {site.availability}
-          <span className="text-faint">·</span>
-          {site.location}
+      <div className="relative z-1 mx-auto w-full max-w-300 px-5 pt-32 pb-20 sm:px-7">
+        <motion.p {...fade(0.1)}>
+          <span className="glass inline-flex items-center gap-2.5 rounded-full px-4.5 py-2 font-mono text-[11px] tracking-[0.2em] text-muted uppercase">
+            <span className="inline-block size-2 animate-[pulse-dot_1.8s_ease-in-out_infinite] rounded-full bg-accent" />
+            {site.availability}
+            <span className="text-faint">·</span>
+            {site.location}
+          </span>
         </motion.p>
 
-        <h1 className="mt-8 text-[clamp(2.9rem,8.2vw,7.25rem)] leading-[0.98] font-semibold tracking-[-0.04em]">
+        <h1 className="display mt-9 text-[clamp(3rem,8.4vw,7.5rem)] leading-[0.96]">
           <Line delay={0.18}>I turn ideas into</Line>
           <Line delay={0.28}>
-            <span className="serif-italic pr-2 text-accent">
-              working products.
-            </span>
+            <span className="text-glint">working products.</span>
           </Line>
         </h1>
 
@@ -118,16 +180,16 @@ export function Hero() {
               href={site.calendly}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-[15px] font-medium text-accent-ink transition-colors hover:bg-accent-bright"
+              className="shine glass-accent inline-flex items-center gap-3 rounded-full py-2 pr-2 pl-6 text-[15px] font-medium text-fg transition-transform duration-300 hover:-translate-y-0.5"
             >
               Book a 15 minute call
-              <ArrowUpRight />
+              <ArrowCircle className="size-9" />
             </a>
           </Magnetic>
           <Magnetic>
             <Link
               href="/work"
-              className="inline-flex items-center gap-2.5 rounded-full border border-line-strong px-7 py-3.5 text-[15px] font-medium text-fg transition-colors hover:border-accent"
+              className="shine glass inline-flex items-center rounded-full px-7 py-3.5 text-[15px] font-medium text-fg transition-transform duration-300 hover:-translate-y-0.5"
             >
               See the work
             </Link>

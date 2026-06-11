@@ -9,12 +9,12 @@ export function Process() {
     <section className="py-28 sm:py-36">
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <SectionHeading
-          index="03"
+          index="04"
           eyebrow="How it works"
           lines={[
             "No mystery,",
             <span key="2">
-              no <span className="serif-italic text-accent">big reveal.</span>
+              no <span className="text-glint">big reveal.</span>
             </span>,
           ]}
           lede="You see the product grow on a live link from day one. Here is the whole process, start to finish."
@@ -25,16 +25,14 @@ export function Process() {
             <li key={step.step} className="bg-surface">
               <Reveal delay={i * 0.1} className="h-full">
                 <div className="flex h-full flex-col p-7 sm:p-8">
-                  <p className="font-mono text-[26px] leading-none text-accent/50">
+                  <p className="outline-num text-[2.6rem] leading-none">
                     {step.step}
                   </p>
-                  <h3 className="mt-6 text-[22px] font-semibold tracking-[-0.02em]">
-                    {step.title}
-                  </h3>
+                  <h3 className="display mt-6 text-[22px]">{step.title}</h3>
                   <p className="mt-3 grow text-[14.5px] leading-relaxed text-muted">
                     {step.body}
                   </p>
-                  <p className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-line-strong px-3.5 py-1.5 font-mono text-[10.5px] tracking-[0.14em] text-muted uppercase">
+                  <p className="glass mt-6 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 font-mono text-[10.5px] tracking-[0.14em] text-muted uppercase">
                     <span className="size-1 rounded-full bg-accent" />
                     {step.detail}
                   </p>
