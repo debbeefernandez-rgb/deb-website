@@ -351,7 +351,7 @@ export default function AboutPage() {
                 <p className="eyebrow">Stack</p>
                 <p className="mt-3 text-[14.5px] leading-relaxed text-muted">
                   Next.js, TypeScript, Tailwind, Motion, deployed on Vercel.
-                  Type set in Geist and Instrument Serif.
+                  Type set in Geist and Geist Mono, self-hosted.
                 </p>
               </div>
               <div>

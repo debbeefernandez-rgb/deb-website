@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Providers, accentInitScript } from "@/components/providers";
 import { Nav } from "@/components/nav";
@@ -9,20 +9,19 @@ import { CommandMenu } from "@/components/command-menu";
 import { Preloader } from "@/components/preloader";
 import { site } from "@/lib/site";
 
-const geist = Geist({
+/* The exact variable fonts shipped inside the original site file. */
+const geist = localFont({
+  src: "../fonts/geist.woff2",
   variable: "--font-geist",
-  subsets: ["latin"],
+  weight: "100 900",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "../fonts/geist-mono.woff2",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "100 900",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -75,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${geistMono.variable} ${bricolage.variable} antialiased`}
+      className={`${geist.variable} ${geistMono.variable} antialiased`}
     >
       <body className="grain">
         <script dangerouslySetInnerHTML={{ __html: accentInitScript }} />

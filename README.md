@@ -28,6 +28,7 @@ npm run lint     # eslint
 | `src/components/home/` | Home page sections in order |
 | `src/components/` | Shared pieces: nav, footer, command menu, cursor, reveals, marquee |
 | `src/app/globals.css` | Design tokens. The three accent themes (caramel, pink, plum) live here |
+| `src/fonts/` | Geist and Geist Mono variable fonts, self-hosted, pulled from the original site file |
 | `public/images/` | Optimized webp images |
 | `public/og.png` | Social share image |
 
