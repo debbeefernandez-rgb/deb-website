@@ -72,10 +72,10 @@ export function ProjectCard({
           />
           <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/55 via-transparent to-transparent" />
           {/* glass chips on the image */}
-          <span className="glass absolute top-4 left-4 rounded-full px-3.5 py-1.5 font-mono text-[10px] tracking-[0.16em] text-fg uppercase">
+          <span className="absolute top-4 left-4 rounded-full border border-line-strong bg-bg-deep/85 px-3.5 py-1.5 font-mono text-[10px] tracking-[0.16em] text-fg uppercase backdrop-blur">
             {project.category}
           </span>
-          <span className="glass-accent absolute bottom-4 left-4 rounded-full px-3.5 py-1.5 font-mono text-[10px] tracking-[0.14em] text-fg uppercase">
+          <span className="glass-dark absolute bottom-4 left-4 rounded-full px-3.5 py-1.5 font-mono text-[10px] tracking-[0.14em] text-fg uppercase">
             {project.outcome}
           </span>
         </span>
