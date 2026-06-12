@@ -125,16 +125,7 @@ export function Hero() {
       <CursorOrbs />
 
       <div className="relative z-1 mx-auto w-full max-w-300 px-5 pt-32 pb-20 sm:px-7">
-        <motion.p {...fade(0.1)}>
-          <span className="glass inline-flex items-center gap-2.5 rounded-full px-4.5 py-2 font-mono text-[11px] tracking-[0.2em] text-muted uppercase">
-            <span className="inline-block size-2 animate-[pulse-dot_1.8s_ease-in-out_infinite] rounded-full bg-accent" />
-            {site.availability}
-            <span className="text-faint">·</span>
-            {site.location}
-          </span>
-        </motion.p>
-
-        <h1 className="display mt-9 text-[clamp(3rem,8.4vw,7.5rem)] leading-[0.96]">
+        <h1 className="display text-[clamp(3rem,8.4vw,7.5rem)] leading-[0.96]">
           <Line delay={0.18}>I turn ideas into</Line>
           <Line delay={0.28}>
             <span className="text-glint">working products.</span>
