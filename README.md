@@ -1,22 +1,29 @@
 # debfernandez.com
 
-Service portfolio for Deb Fernandez: designer turned product developer. Built with Next.js, TypeScript, Tailwind CSS v4, and Motion. Deploys on Vercel with zero config.
+Service portfolio for Deb Fernandez: designer turned product developer. Built with Next.js, TypeScript, Tailwind CSS v4, and Motion. The build is a full static export (`out/`), so it deploys to Netlify, Vercel, or any host that serves files.
 
 ## Run it
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
-npm run build    # production build
-npm run lint     # eslint
+npm run dev          # http://localhost:3000
+npm run build        # builds the static site into out/
+npx http-server out  # preview the production build
+npm run lint         # eslint
 ```
+
+## Deploy on Netlify
+
+1. Log into Netlify, click **Add new site > Import an existing project**, pick GitHub, choose this repo.
+2. Netlify reads `netlify.toml` automatically: build command `npm run build`, publish directory `out`. Change nothing.
+3. Deploy. Every push to `main` redeploys.
+4. Add your domain under **Domain management**, then update `site.url` in `src/lib/site.ts` if the domain changes.
+
+No environment variables, no functions, no database. The 404 page works out of the box because Netlify serves `404.html`.
 
 ## Deploy on Vercel
 
-1. Push this repo to GitHub.
-2. In Vercel, click **Add New Project** and import the repo.
-3. Framework preset: Next.js. No environment variables needed. Deploy.
-4. Point your domain at the project, then update `site.url` in `src/lib/site.ts` if the domain changes.
+Same idea: **Add New Project**, import the repo, deploy. Vercel detects Next.js and serves the static export. No settings needed.
 
 ## Where things live
 
