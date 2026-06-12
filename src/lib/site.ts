@@ -67,7 +67,7 @@ export const services: Service[] = [
       "Deployed, tested, and handed over",
     ],
     goodFor: "Founders who need an MVP without hiring a dev team",
-    timeline: "2 to 6 weeks",
+    timeline: "1 week max",
   },
   {
     index: "02",
@@ -81,7 +81,7 @@ export const services: Service[] = [
       "Ad creative at volume",
     ],
     goodFor: "Teams that need to look bigger than they are",
-    timeline: "1 to 4 weeks",
+    timeline: "1 week max",
   },
   {
     index: "03",
@@ -95,7 +95,7 @@ export const services: Service[] = [
       "SEO and AI search setup",
     ],
     goodFor: "Teams drowning in repetitive work",
-    timeline: "2 to 5 weeks",
+    timeline: "2 weeks max",
   },
 ];
 
@@ -154,11 +154,11 @@ export const faqs = [
   },
   {
     q: "What does vibe coding actually mean?",
-    a: "Building software by directing AI instead of typing every line by hand. I describe what I want, AI writes the code, and I steer, test, and refine until it works. It compresses months of dev work into weeks. The catch is you still need taste and judgment, and that's the part I bring.",
+    a: "Building software by directing AI instead of typing every line by hand. I describe what I want, AI writes the code, and I steer, test, and refine until it works. It compresses months of dev work into days. The catch is you still need taste and judgment, and that's the part I bring.",
   },
   {
     q: "How fast is fast?",
-    a: "A landing page in days. An MVP in 2 to 6 weeks. A brand system in 1 to 4. I give you a real date in the brief before we start, and you see progress on a live link daily, so you never have to wonder.",
+    a: "A landing page in days. A product build or a brand package in a week, tops. AI systems in two. I give you a real date in the brief before we start, and you see progress on a live link daily, so you never have to wonder.",
   },
   {
     q: "Who owns the work?",

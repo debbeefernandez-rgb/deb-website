@@ -64,10 +64,10 @@ function OrbitalPortrait() {
       </div>
       <div className="relative aspect-square overflow-hidden rounded-full border border-line-strong shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]">
         <Image
-          src="/images/deb-portrait.webp"
-          alt="Deb Fernandez"
-          width={823}
-          height={845}
+          src="/images/deb-field.webp"
+          alt="Deb Fernandez outdoors with two of her dogs"
+          width={511}
+          height={680}
           sizes="(max-width: 860px) 70vw, 370px"
           className="size-full object-cover"
         />

@@ -20,7 +20,7 @@ export function LiveDemo() {
                   the <span className="text-glint">screenshots.</span>
                 </span>,
               ]}
-              lede="This is a sandboxed copy of a content engine I built and run in production. Click around, schedule a post, break something. That's what it's there for."
+              lede="This is a sandboxed copy of my social media agent, the same build that runs my own accounts. Click around, approve a post, break something. That's what it's there for."
             />
             <Reveal delay={0.25}>
               <div className="mt-9 flex flex-wrap items-center gap-5">
@@ -67,10 +67,10 @@ export function LiveDemo() {
               </span>
               <span className="relative block">
                 <Image
-                  src="/images/work-content-engine.webp"
-                  alt="The content engine demo: generation runs, scheduled posts, channel queues"
-                  width={1348}
-                  height={828}
+                  src="/images/demo-queue.webp"
+                  alt="The social media agent demo: a queue of AI drafted posts with approve, reject, regenerate, and retry controls"
+                  width={1577}
+                  height={870}
                   sizes="(max-width: 1024px) 92vw, 640px"
                   className="block w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 />

@@ -62,10 +62,10 @@ export default function AboutPage() {
           <div className="lg:sticky lg:top-24">
             <div className="overflow-hidden rounded-2xl border border-line shadow-2xl shadow-black/40">
               <Image
-                src="/images/deb-portrait.webp"
-                alt="Deb Fernandez, studio portrait"
-                width={823}
-                height={845}
+                src="/images/deb-field.webp"
+                alt="Deb Fernandez outdoors with two of her dogs"
+                width={511}
+                height={680}
                 sizes="(max-width: 1024px) 92vw, 480px"
                 priority
                 className="w-full object-cover"
@@ -80,8 +80,10 @@ export default function AboutPage() {
         <div className="flex flex-col gap-7">
           <Reveal>
             <p className="text-[clamp(1.3rem,2.4vw,1.7rem)] leading-snug font-medium tracking-[-0.015em]">
-              I spent five years as a designer. Brands, campaigns, thousands of
-              pieces of content for companies in the US and Europe.
+              I started in journalism, laying out pages in the Adobe suite.
+              That turned into five years of design work: brands, campaigns,
+              thousands of pieces of content for companies in the US and
+              Europe.
             </p>
           </Reveal>
           <Reveal delay={0.08}>
@@ -95,12 +97,33 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="text-[16.5px] leading-relaxed text-muted">
-              I don&apos;t have a computer science degree and I don&apos;t
-              pretend to. What I have is taste from five years of design work,
-              plus the judgment to steer AI until the product is right. That
-              combination used to take a team. Now you can hire it as one
-              person.
+              And no, I don&apos;t have a computer science degree. Mine is in
+              mining engineering. Engineering taught me systems, design gave
+              me taste, AI gave me leverage. That combination used to take a
+              team. Now you can hire it as one person.
             </p>
+          </Reveal>
+
+          <Reveal delay={0.14}>
+            <div>
+              <p className="eyebrow">The paper trail</p>
+              <ul className="mt-4 space-y-2.5">
+                {[
+                  "B.S. Mining Engineering",
+                  "Trained with DICT, the Philippine government's ICT department",
+                  "Certified Social Media Manager, Philippines",
+                  "Adobe ecosystem since my journalism days",
+                ].map((c) => (
+                  <li
+                    key={c}
+                    className="flex items-start gap-3 text-[14.5px] text-fg/90"
+                  >
+                    <span className="mt-[7px] size-1.5 shrink-0 rounded-full bg-accent/80" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
 
           <Reveal delay={0.15}>
@@ -297,7 +320,7 @@ export default function AboutPage() {
           </div>
           <Reveal className="order-1 lg:order-2">
             <div className="grid grid-cols-2 gap-3">
-              <div className="overflow-hidden rounded-2xl border border-line">
+              <div className="relative overflow-hidden rounded-2xl border border-line">
                 <Image
                   src="/images/dogs.webp"
                   alt="Deb's three brown dogs in a studio portrait"
@@ -306,16 +329,22 @@ export default function AboutPage() {
                   sizes="(max-width: 1024px) 46vw, 300px"
                   className="h-full w-full object-cover"
                 />
+                <p className="absolute bottom-3.5 left-3.5 rounded-md border border-line-strong bg-bg-deep/80 px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.18em] text-fg uppercase backdrop-blur">
+                  The board of directors
+                </p>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-line">
+              <div className="relative overflow-hidden rounded-2xl border border-line">
                 <Image
-                  src="/images/deb-field.webp"
-                  alt="Deb outdoors with two of her dogs"
-                  width={511}
-                  height={680}
+                  src="/images/horse.webp"
+                  alt="Deb on horseback at the riding arena"
+                  width={768}
+                  height={1024}
                   sizes="(max-width: 1024px) 46vw, 300px"
                   className="h-full w-full object-cover"
                 />
+                <p className="absolute bottom-3.5 left-3.5 rounded-md border border-line-strong bg-bg-deep/80 px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.18em] text-fg uppercase backdrop-blur">
+                  Weekend office
+                </p>
               </div>
             </div>
           </Reveal>
