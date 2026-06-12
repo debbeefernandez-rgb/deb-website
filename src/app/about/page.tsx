@@ -80,10 +80,14 @@ export default function AboutPage() {
         <div className="flex flex-col gap-7">
           <Reveal>
             <p className="text-[clamp(1.3rem,2.4vw,1.7rem)] leading-snug font-medium tracking-[-0.015em]">
-              I started in journalism, laying out pages in the Adobe suite.
-              That turned into five years of design work: brands, campaigns,
-              thousands of pieces of content for companies in the US and
-              Europe.
+              I build the whole stack. Software, AI, visibility, brand,
+              eCommerce, and trading, end to end. You own everything I make.
+            </p>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <p className="text-[16.5px] leading-relaxed text-muted">
+              Five years supporting eCom stores, service providers, and
+              Forbes-featured founders. Fast learner, clean execution.
             </p>
           </Reveal>
           <Reveal delay={0.08}>
