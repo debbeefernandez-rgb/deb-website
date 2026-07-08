@@ -36,9 +36,9 @@ export function HomeCta() {
                   href={site.calendly}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shine inline-flex items-center gap-3.5 rounded-full bg-cream-ink py-2.5 pr-2.5 pl-7 text-[15.5px] font-medium text-cream shadow-xl shadow-black/25 transition-transform duration-300 hover:-translate-y-0.5"
+                  className="shine wipe inline-flex items-center gap-3.5 rounded-full bg-cream-ink py-2.5 pr-2.5 pl-7 text-[15.5px] font-medium text-cream shadow-xl shadow-black/25 hover:-translate-y-0.5"
                 >
-                  Get started
+                  <span>Get started</span>
                   <ArrowCircle className="size-9.5" />
                 </a>
               </Magnetic>

@@ -33,7 +33,7 @@ export function Testimonials() {
         <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal key={t.role} delay={i * 0.1} className="h-full">
-              <Spotlight className="glass flex h-full flex-col rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1">
+              <Spotlight className="wipe-soft glass flex h-full flex-col rounded-2xl p-8 hover:-translate-y-1">
                 <Stars />
                 <blockquote className="mt-5 grow text-[17px] leading-relaxed text-fg/95">
                   &ldquo;{t.quote}&rdquo;

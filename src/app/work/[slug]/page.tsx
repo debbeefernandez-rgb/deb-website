@@ -195,7 +195,7 @@ export default async function CaseStudyPage({
         <Reveal>
           <Link
             href={`/work/${next.slug}`}
-            className="group mt-6 flex items-center justify-between rounded-2xl border border-line p-8 transition-colors hover:border-accent/50 sm:p-10"
+            className="wipe-soft group mt-6 flex items-center justify-between rounded-2xl border border-line p-8 sm:p-10"
           >
             <span>
               <span className="eyebrow block">Next project</span>

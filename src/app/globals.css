@@ -188,6 +188,80 @@ p {
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
+/*
+  The signature wipe, same motion as the manifesto and portrait:
+  a layer sweeps in left to right on hover (and on tap via :active).
+  .wipe = full accent fill for buttons and pills; text flips dark.
+  .wipe-soft = faint accent tint for cards; text stays as is.
+*/
+.wipe,
+.wipe-soft {
+  position: relative;
+  isolation: isolate;
+  transition:
+    color 0.4s cubic-bezier(0.21, 0.7, 0.2, 1),
+    border-color 0.4s ease,
+    transform 0.3s cubic-bezier(0.21, 0.7, 0.2, 1),
+    box-shadow 0.4s ease;
+}
+
+.wipe::before,
+.wipe-soft::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.45s cubic-bezier(0.21, 0.7, 0.2, 1);
+}
+
+.wipe::before {
+  background: linear-gradient(120deg, var(--accent), var(--accent-bright));
+}
+
+.wipe-soft::before {
+  background: linear-gradient(120deg, var(--accent-tint), color-mix(in oklch, var(--accent) 6%, transparent));
+}
+
+.wipe > *,
+.wipe-soft > * {
+  position: relative;
+  z-index: 2;
+}
+
+.wipe:hover::before,
+.wipe:active::before,
+.wipe-soft:hover::before,
+.wipe-soft:active::before {
+  clip-path: inset(0 0 0 0);
+}
+
+.wipe:hover,
+.wipe:active {
+  color: var(--accent-ink);
+}
+
+.wipe-soft:hover {
+  border-color: color-mix(in oklch, var(--accent) 40%, transparent);
+}
+
+/* the arrow circle inverts once the caramel fill arrives */
+.arrow-circ {
+  transition:
+    background-color 0.4s cubic-bezier(0.21, 0.7, 0.2, 1),
+    color 0.4s cubic-bezier(0.21, 0.7, 0.2, 1),
+    box-shadow 0.4s ease;
+}
+
+.wipe:hover .arrow-circ,
+.wipe:active .arrow-circ {
+  background-color: var(--accent-ink);
+  color: var(--cream);
+  box-shadow: none;
+}
+
 /* mirror gleam that sweeps across on hover */
 .shine {
   position: relative;
@@ -197,6 +271,7 @@ p {
 .shine::after {
   content: "";
   position: absolute;
+  z-index: 3;
   inset: -40% auto;
   left: -70%;
   width: 55%;

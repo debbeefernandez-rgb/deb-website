@@ -24,7 +24,7 @@ export function Services() {
         <div className="mt-16 grid grid-cols-1 gap-5 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.index} delay={i * 0.09} className="h-full">
-              <Spotlight className="glass group flex h-full flex-col rounded-2xl p-7 transition-transform duration-300 hover:-translate-y-1 sm:p-8">
+              <Spotlight className="wipe-soft glass group flex h-full flex-col rounded-2xl p-7 hover:-translate-y-1 sm:p-8">
                 <div className="flex items-start justify-between">
                   <span className="outline-num text-[clamp(2.6rem,4vw,3.4rem)] leading-none">
                     {s.index}
