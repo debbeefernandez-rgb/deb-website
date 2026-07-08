@@ -44,7 +44,7 @@ export default function ContactPage() {
               href={site.calendly}
               target="_blank"
               rel="noopener noreferrer"
-              className="shine wipe-soft glass-accent group block h-full rounded-2xl p-8 hover:-translate-y-1"
+              className="shine glass-accent group block h-full rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
             >
               <span className="flex items-center justify-between">
                 <span className="eyebrow text-accent-bright">
@@ -68,7 +68,7 @@ export default function ContactPage() {
           <Reveal delay={0.18}>
             <a
               href={`mailto:${site.email}`}
-              className="shine wipe-soft glass group block h-full rounded-2xl p-8 hover:-translate-y-1"
+              className="shine glass group block h-full rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
             >
               <span className="flex items-center justify-between">
                 <span className="eyebrow">Direct</span>
@@ -100,17 +100,17 @@ export default function ContactPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/#brief"
-                className="glass shine wipe rounded-full px-5 py-2.5 text-[14px] font-medium hover:-translate-y-0.5"
+                className="glass shine rounded-full px-5 py-2.5 text-[14px] font-medium transition-transform duration-300 hover:-translate-y-0.5"
               >
-                <span>Brief builder</span>
+                Brief builder
               </Link>
               <a
                 href={site.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass shine wipe rounded-full px-5 py-2.5 text-[14px] font-medium hover:-translate-y-0.5"
+                className="glass shine rounded-full px-5 py-2.5 text-[14px] font-medium transition-transform duration-300 hover:-translate-y-0.5"
               >
-                <span>Instagram</span>
+                Instagram
               </a>
             </div>
           </div>

@@ -106,9 +106,9 @@ export function Nav() {
           </div>
           <Link
             href="/contact"
-            className="shine wipe glass-dark rounded-full px-5 py-2.5 text-[13.5px] font-medium text-fg hover:-translate-y-0.5"
+            className="shine glass-dark rounded-full px-5 py-2.5 text-[13.5px] font-medium text-fg transition-transform duration-300 hover:-translate-y-0.5"
           >
-            <span>Start a project</span>
+            Start a project
           </Link>
         </nav>
 

@@ -171,18 +171,18 @@ export function Hero() {
               href={site.calendly}
               target="_blank"
               rel="noopener noreferrer"
-              className="shine wipe glass-accent inline-flex items-center gap-3 rounded-full py-2 pr-2 pl-6 text-[15px] font-medium text-fg hover:-translate-y-0.5"
+              className="shine glass-accent inline-flex items-center gap-3 rounded-full py-2 pr-2 pl-6 text-[15px] font-medium text-fg transition-transform duration-300 hover:-translate-y-0.5"
             >
-              <span>Book a 15 minute call</span>
+              Book a 15 minute call
               <ArrowCircle className="size-9" />
             </a>
           </Magnetic>
           <Magnetic>
             <Link
               href="/work"
-              className="shine wipe glass inline-flex items-center rounded-full px-7 py-3.5 text-[15px] font-medium text-fg hover:-translate-y-0.5"
+              className="shine glass inline-flex items-center rounded-full px-7 py-3.5 text-[15px] font-medium text-fg transition-transform duration-300 hover:-translate-y-0.5"
             >
-              <span>See the work</span>
+              See the work
             </Link>
           </Magnetic>
         </motion.div>

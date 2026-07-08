@@ -211,9 +211,9 @@ export function MeetDeb() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link
                 href="/about"
-                className="shine wipe glass-accent inline-flex items-center gap-3 rounded-full py-2 pr-2 pl-6 text-[15px] font-medium hover:-translate-y-0.5"
+                className="shine glass-accent inline-flex items-center gap-3 rounded-full py-2 pr-2 pl-6 text-[15px] font-medium transition-transform duration-300 hover:-translate-y-0.5"
               >
-                <span>More about me</span>
+                More about me
                 <ArrowCircle className="size-9" />
               </Link>
               <Button href="/contact" variant="glass" magnetic={false}>
