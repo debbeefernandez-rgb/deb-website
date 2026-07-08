@@ -43,13 +43,23 @@ function OrbitalPortrait() {
     (v) => `inset(0 ${(1 - v) * 100}% 0 0)`,
   );
 
-  // touch devices: the wipe follows scroll, just like the manifesto
+  // one pair of springs feeds the 3D tilt, from the cursor on desktop
+  // and from scroll position on touch
+  const rotateX = useSpring(0, { stiffness: 150, damping: 17 });
+  const rotateY = useSpring(0, { stiffness: 150, damping: 17 });
+  // the gleam sweeps across as the reveal progresses (used on touch)
+  const gleamX = useTransform(progress, [0.1, 0.9], ["-130%", "130%"]);
+
+  // touch devices: the wipe, tilt, and gleam all follow scroll
   const { scrollYProgress } = useScroll({
     target: circleRef,
     offset: ["start 0.9", "center 0.42"],
   });
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (!hoverCapable && !reduce) progress.set(v);
+    if (hoverCapable || reduce) return;
+    progress.set(v);
+    // gentle forward lean that settles flat as it reaches center
+    rotateX.set((1 - v) * 9);
   });
 
   const wipeTo = (target: number) => {
@@ -60,18 +70,6 @@ function OrbitalPortrait() {
     }
     animate(progress, target, { duration: 0.7, ease: [0.21, 0.7, 0.2, 1] });
   };
-
-  // 3D tilt that follows the cursor, same feel as the work cards
-  const px = useMotionValue(0.5);
-  const py = useMotionValue(0.5);
-  const rotateX = useSpring(useTransform(py, [0, 1], [8, -8]), {
-    stiffness: 150,
-    damping: 17,
-  });
-  const rotateY = useSpring(useTransform(px, [0, 1], [-8, 8]), {
-    stiffness: 150,
-    damping: 17,
-  });
 
   return (
     <div className="relative mx-auto w-[min(100%,370px)]">
@@ -129,15 +127,15 @@ function OrbitalPortrait() {
         onMouseEnter={() => wipeTo(1)}
         onMouseLeave={() => {
           wipeTo(0);
-          px.set(0.5);
-          py.set(0.5);
+          rotateX.set(0);
+          rotateY.set(0);
         }}
         onPointerMove={(e) => {
           if (!hoverCapable || reduce) return;
           const r = circleRef.current?.getBoundingClientRect();
           if (!r) return;
-          px.set((e.clientX - r.left) / r.width);
-          py.set((e.clientY - r.top) / r.height);
+          rotateX.set((0.5 - (e.clientY - r.top) / r.height) * 16);
+          rotateY.set(((e.clientX - r.left) / r.width - 0.5) * 16);
         }}
         style={
           reduce
@@ -169,6 +167,12 @@ function OrbitalPortrait() {
             className="size-full object-cover"
           />
         </motion.div>
+        {/* scroll-driven gleam, touch screens only (desktop uses .shine) */}
+        <motion.span
+          aria-hidden
+          style={{ x: gleamX }}
+          className="pointer-events-none absolute inset-y-[-40%] left-0 hidden w-[55%] skew-x-[-22deg] bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-coarse:block"
+        />
       </motion.div>
 
       <p className="mt-5 text-center font-mono text-[10px] tracking-[0.22em] text-faint uppercase">
