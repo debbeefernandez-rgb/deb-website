@@ -1,5 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState } from "react";
+import {
+  animate,
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { Reveal, RevealLines } from "../reveal";
 import { Button, ArrowCircle } from "../buttons";
 
@@ -10,8 +22,44 @@ const facts = [
   { k: "100%", v: "Solo, no handoffs" },
 ];
 
-/* Orbiting dots + conic ring around the portrait, ported from v1. */
+/*
+  Orbiting dots + conic ring around the portrait. Hovering (or scrolling
+  past it on touch screens) wipes in the AI version of the same portrait,
+  the same left-to-right reveal the manifesto lines use.
+*/
 function OrbitalPortrait() {
+  const circleRef = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+  const [hoverCapable] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(hover: hover) and (pointer: fine)").matches,
+  );
+
+  const progress = useMotionValue(0);
+  const clipPath = useTransform(
+    progress,
+    (v) => `inset(0 ${(1 - v) * 100}% 0 0)`,
+  );
+
+  // touch devices: the wipe follows scroll, just like the manifesto
+  const { scrollYProgress } = useScroll({
+    target: circleRef,
+    offset: ["start 0.9", "center 0.42"],
+  });
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    if (!hoverCapable && !reduce) progress.set(v);
+  });
+
+  const wipeTo = (target: number) => {
+    if (!hoverCapable) return;
+    if (reduce) {
+      progress.set(target);
+      return;
+    }
+    animate(progress, target, { duration: 0.7, ease: [0.21, 0.7, 0.2, 1] });
+  };
+
   return (
     <div className="relative mx-auto w-[min(100%,370px)]">
       <div
@@ -62,7 +110,13 @@ function OrbitalPortrait() {
           }}
         />
       </div>
-      <div className="relative aspect-square overflow-hidden rounded-full border border-line-strong shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]">
+
+      <div
+        ref={circleRef}
+        onMouseEnter={() => wipeTo(1)}
+        onMouseLeave={() => wipeTo(0)}
+        className="relative aspect-square overflow-hidden rounded-full border border-line-strong shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]"
+      >
         <Image
           src="/images/deb-portrait.webp"
           alt="Deb Fernandez, studio portrait"
@@ -71,7 +125,27 @@ function OrbitalPortrait() {
           sizes="(max-width: 860px) 70vw, 370px"
           className="size-full object-cover"
         />
+        {/* the AI version wipes in over the top */}
+        <motion.div
+          aria-hidden
+          style={{ clipPath }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="/images/deb-ai.webp"
+            alt=""
+            width={1000}
+            height={1026}
+            sizes="(max-width: 860px) 70vw, 370px"
+            className="size-full object-cover"
+          />
+        </motion.div>
       </div>
+
+      <p className="mt-5 text-center font-mono text-[10px] tracking-[0.22em] text-faint uppercase">
+        <span className="hidden pointer-fine:inline">Hover me</span>
+        <span className="pointer-fine:hidden">Keep scrolling</span>
+      </p>
     </div>
   );
 }
