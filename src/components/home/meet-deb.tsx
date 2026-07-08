@@ -10,6 +10,7 @@ import {
   useMotionValueEvent,
   useReducedMotion,
   useScroll,
+  useSpring,
   useTransform,
 } from "motion/react";
 import { Reveal, RevealLines } from "../reveal";
@@ -59,6 +60,18 @@ function OrbitalPortrait() {
     }
     animate(progress, target, { duration: 0.7, ease: [0.21, 0.7, 0.2, 1] });
   };
+
+  // 3D tilt that follows the cursor, same feel as the work cards
+  const px = useMotionValue(0.5);
+  const py = useMotionValue(0.5);
+  const rotateX = useSpring(useTransform(py, [0, 1], [8, -8]), {
+    stiffness: 150,
+    damping: 17,
+  });
+  const rotateY = useSpring(useTransform(px, [0, 1], [-8, 8]), {
+    stiffness: 150,
+    damping: 17,
+  });
 
   return (
     <div className="relative mx-auto w-[min(100%,370px)]">
@@ -111,11 +124,27 @@ function OrbitalPortrait() {
         />
       </div>
 
-      <div
+      <motion.div
         ref={circleRef}
         onMouseEnter={() => wipeTo(1)}
-        onMouseLeave={() => wipeTo(0)}
-        className="relative aspect-square overflow-hidden rounded-full border border-line-strong shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]"
+        onMouseLeave={() => {
+          wipeTo(0);
+          px.set(0.5);
+          py.set(0.5);
+        }}
+        onPointerMove={(e) => {
+          if (!hoverCapable || reduce) return;
+          const r = circleRef.current?.getBoundingClientRect();
+          if (!r) return;
+          px.set((e.clientX - r.left) / r.width);
+          py.set((e.clientY - r.top) / r.height);
+        }}
+        style={
+          reduce
+            ? undefined
+            : { rotateX, rotateY, transformPerspective: 1000 }
+        }
+        className="shine relative aspect-square overflow-hidden rounded-full border border-line-strong shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]"
       >
         <Image
           src="/images/deb-portrait.webp"
@@ -140,7 +169,7 @@ function OrbitalPortrait() {
             className="size-full object-cover"
           />
         </motion.div>
-      </div>
+      </motion.div>
 
       <p className="mt-5 text-center font-mono text-[10px] tracking-[0.22em] text-faint uppercase">
         <span className="hidden pointer-fine:inline">Hover me</span>
