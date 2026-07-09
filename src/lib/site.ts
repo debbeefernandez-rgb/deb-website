@@ -218,3 +218,106 @@ export const briefDepths = [
   { key: "polish", label: "Polished", note: "Production ready, on brand" },
   { key: "system", label: "Full system", note: "Documented so your team can extend it" },
 ];
+
+/* Unlisted pricing page. Not in nav, footer, or sitemap; noindex. */
+export const pricingDeal = [
+  "Fixed price, agreed upfront",
+  "Live link from day one",
+  "You own the repo",
+  "Replies within 24h",
+];
+
+export type Tier = {
+  tag: string;
+  name: string;
+  who: string;
+  price: string;
+  unit: string;
+  usd: string;
+  features: string[];
+  ships: string;
+  revisions: string;
+  cta: string;
+  featured?: boolean;
+};
+
+export const tiers: Tier[] = [
+  {
+    tag: "Tier 01",
+    name: "Landing",
+    who: "You need one page that converts.",
+    price: "₱20,000",
+    unit: "one-time",
+    usd: "≈ $350 USD",
+    features: [
+      "Single-page marketing site",
+      "Built on Next.js, deployed to Vercel",
+      "Mobile-first, fast by default",
+      "Domain and hosting setup (1 year)",
+      "Contact form to your inbox",
+      "Basic on-page SEO",
+    ],
+    ships: "Ships in 7 days",
+    revisions: "2 revision rounds included. Extra rounds ₱1,500 each.",
+    cta: "Start this",
+  },
+  {
+    tag: "Most booked",
+    name: "Website",
+    who: "You need to look bigger than you are.",
+    price: "₱35,000",
+    unit: "one-time",
+    usd: "≈ $600 USD",
+    features: [
+      "Full marketing site, custom design",
+      "Brand system: logo, colors, type",
+      "Booking flow with email alerts",
+      "Photo and video galleries",
+      "Domain and hosting setup (1 year)",
+      "Analytics and on-page SEO",
+      "Social integration",
+    ],
+    ships: "Ships in 14 days",
+    revisions: "3 revision rounds included. Extra rounds ₱2,500 each.",
+    cta: "Start this",
+    featured: true,
+  },
+  {
+    tag: "Tier 03",
+    name: "Product",
+    who: "You need an MVP without hiring a dev team.",
+    price: "₱65,000",
+    unit: "one-time",
+    usd: "≈ $1,150 USD",
+    features: [
+      "Web app, dashboard, or internal tool",
+      "Designed and built end to end",
+      "Auth, database, admin panel",
+      "Custom Shopify or headless storefront",
+      "Deployed, tested, handed to you",
+      "Advanced SEO and speed optimization",
+    ],
+    ships: "Ships in 21 days",
+    revisions: "5 revision rounds included. Extra rounds ₱3,500 each.",
+    cta: "Start this",
+  },
+  {
+    tag: "Tier 04",
+    name: "AI system",
+    who: "You are drowning in repetitive work.",
+    price: "₱120,000+",
+    unit: "custom",
+    usd: "≈ $2,100+ USD",
+    features: [
+      "Custom AI agents and assistants",
+      "Content and marketing automation",
+      "Review and approval pipelines",
+      "Payments, members area, login",
+      "Premium hosting and full SEO",
+      "30 days post-launch support",
+    ],
+    ships: "Ships in 4 weeks",
+    revisions: "Unlimited revisions within scope. Changes billed per scope.",
+    cta: "Request quote",
+  },
+];
