@@ -21,16 +21,18 @@ export function SectionHeading({
   const centered = align === "center";
   return (
     <div className={`relative ${centered ? "text-center" : ""}`}>
-      <span
-        aria-hidden
-        className={`outline-num pointer-events-none absolute -top-[0.52em] text-[clamp(5.5rem,12vw,10rem)] leading-none opacity-70 ${
-          centered ? "left-1/2 -translate-x-1/2" : "-left-2"
-        }`}
-      >
-        {index}
-      </span>
+      {index && (
+        <span
+          aria-hidden
+          className={`outline-num pointer-events-none absolute -top-[0.52em] text-[clamp(5.5rem,12vw,10rem)] leading-none opacity-70 ${
+            centered ? "left-1/2 -translate-x-1/2" : "-left-2"
+          }`}
+        >
+          {index}
+        </span>
+      )}
       <Reveal>
-        <p className="eyebrow relative pt-10">
+        <p className={`eyebrow relative ${index ? "pt-10" : ""}`}>
           <span className="mr-2.5 inline-block size-1.5 rounded-full bg-accent align-middle" />
           {eyebrow}
         </p>

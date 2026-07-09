@@ -21,8 +21,8 @@ export default function PricingPage() {
     <div className="pt-36 pb-28 sm:pb-36">
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <SectionHeading
-          index="08"
-          eyebrow="Pricing · by invitation"
+          index=""
+          eyebrow="Pricing"
           lines={[
             "Fixed price.",
             <span key="2">
