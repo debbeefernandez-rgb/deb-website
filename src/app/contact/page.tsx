@@ -7,7 +7,7 @@ import { ArrowUpRight } from "@/components/buttons";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a 15 minute call or send an email. Replies within 24 hours, Manila time.",
+    "Book a 15 minute call or send an email. Replies within 24 hours, Philippine time.",
 };
 
 export default function ContactPage() {

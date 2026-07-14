@@ -51,10 +51,10 @@ export const metadata: Metadata = {
 };
 
 /*
-  A @graph with the person and the service she offers. areaServed lists
-  Bukidnon and the Philippines so local search and AI answer engines know
-  she takes work there, while keeping worldwide remote scope. All honest:
-  based in PH, serving Bukidnon remotely (RotyPeaks is the proof).
+  A @graph with the person and the service she offers. Deb is based in
+  Bukidnon, Philippines, so the address carries the Bukidnon region and
+  areaServed leads with Bukidnon, then the wider Philippines and worldwide
+  remote. RotyPeaks (a Bukidnon business) is the local proof.
 */
 const structuredData = {
   "@context": "https://schema.org",
@@ -68,7 +68,11 @@ const structuredData = {
       url: site.url,
       image: `${site.url}/og.png`,
       sameAs: [site.instagram, site.blog],
-      address: { "@type": "PostalAddress", addressCountry: "PH" },
+      address: {
+        "@type": "PostalAddress",
+        addressRegion: "Bukidnon",
+        addressCountry: "PH",
+      },
       knowsAbout: [
         "Web design",
         "Web development",
@@ -89,7 +93,11 @@ const structuredData = {
       priceRange: "$$",
       provider: { "@id": `${site.url}/#deb` },
       founder: { "@id": `${site.url}/#deb` },
-      address: { "@type": "PostalAddress", addressCountry: "PH" },
+      address: {
+        "@type": "PostalAddress",
+        addressRegion: "Bukidnon",
+        addressCountry: "PH",
+      },
       areaServed: [
         { "@type": "AdministrativeArea", name: "Bukidnon" },
         { "@type": "Country", name: "Philippines" },

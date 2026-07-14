@@ -2,17 +2,17 @@ export const site = {
   name: "Deb Fernandez",
   title: "Deb Fernandez · Web Designer & Product Developer",
   description:
-    "Web designer and developer in the Philippines. I design brands and build fast, modern websites and software with AI tools like Claude and Cursor. Working with clients from Manila to Bukidnon and worldwide.",
+    "Web designer and developer based in Bukidnon, Philippines. I design brands and build fast, modern websites and software with AI tools like Claude and Cursor. Working with clients across the Philippines and worldwide.",
   keywords: [
-    "web designer Philippines",
-    "web developer Philippines",
     "web designer Bukidnon",
     "web developer Bukidnon",
     "website design Bukidnon",
-    "freelance web developer Philippines",
+    "web designer Philippines",
+    "web developer Philippines",
+    "freelance web developer Bukidnon",
     "Next.js developer Philippines",
     "AI product developer",
-    "brand designer Philippines",
+    "brand designer Bukidnon",
     "Deb Fernandez",
   ],
   url: "https://debfernandez.com",
@@ -21,7 +21,7 @@ export const site = {
   instagram: "https://www.instagram.com/zebijin/",
   blog: "https://blog.debfernandez.com",
   liveDemo: "https://socialmedia.debfernandez.com/queue",
-  location: "Philippines · GMT+8",
+  location: "Bukidnon, Philippines · GMT+8",
   availability: "Booking new projects",
 };
 
@@ -185,8 +185,8 @@ export const faqs = [
     a: "Fixed price per project, agreed before we start. It depends on scope, so the honest answer comes after a 15 minute call. What I can promise: no hourly billing, no surprise invoices, and no agency markup, because there's no agency.",
   },
   {
-    q: "Do you work with businesses in Bukidnon and outside Manila?",
-    a: "Yes. I'm based in the Philippines and work remotely with clients anywhere, from Bukidnon to the US. I rebuilt the website for RotyPeaks Ridge Camp in Impasug-ong, Bukidnon, and made it load 7 times faster. Distance doesn't change the work: you get a live link from day one and you own everything at the end, wherever you are.",
+    q: "Are you based in Bukidnon? Can you work with clients elsewhere?",
+    a: "Yes to both. I'm a web designer and developer based in Bukidnon, Philippines. I work with businesses here at home and remotely with clients across the Philippines and worldwide. I rebuilt the website for RotyPeaks Ridge Camp in Impasug-ong, Bukidnon, and made it load 7 times faster. You get a live link from day one and you own everything at the end, wherever you are.",
   },
 ];
 

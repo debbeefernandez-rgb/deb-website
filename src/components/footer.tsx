@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 import { ArrowUpRight } from "./buttons";
 import { Logo } from "./nav";
 
-function ManilaClock() {
+function LocalClock() {
   const [time, setTime] = useState("--:--:--");
   useEffect(() => {
     const fmt = new Intl.DateTimeFormat("en-US", {
@@ -88,10 +88,10 @@ export function Footer() {
           <div>
             <p className="eyebrow">Local time</p>
             <p className="mt-4 font-mono text-[14px] text-muted">
-              <ManilaClock /> · GMT+8
+              <LocalClock /> · GMT+8
             </p>
             <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-faint uppercase">
-              Manila, Philippines
+              Bukidnon, Philippines
             </p>
           </div>
           <div>
@@ -109,7 +109,7 @@ export function Footer() {
         <div className="mt-14 flex flex-col gap-3 border-t border-line pt-7 text-[12.5px] text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Deb Fernandez. All rights reserved.</p>
           <p className="font-mono text-[11px] tracking-[0.14em] uppercase">
-            Manila · GMT+8
+            Bukidnon · GMT+8
           </p>
         </div>
       </div>
