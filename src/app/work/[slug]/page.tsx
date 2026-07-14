@@ -80,12 +80,25 @@ export default async function CaseStudyPage({
             </Reveal>
           </div>
           <Reveal delay={0.2}>
-            <p className="glass-accent rounded-2xl px-6 py-5">
-              <span className="eyebrow block">Outcome</span>
-              <span className="display mt-2 block text-[clamp(1.3rem,2.4vw,1.7rem)] text-fg">
-                {project.outcome}
-              </span>
-            </p>
+            <div className="flex flex-col items-start gap-4">
+              <p className="glass-accent rounded-2xl px-6 py-5">
+                <span className="eyebrow block">Outcome</span>
+                <span className="display mt-2 block text-[clamp(1.3rem,2.4vw,1.7rem)] text-fg">
+                  {project.outcome}
+                </span>
+              </p>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shine glass inline-flex items-center gap-2.5 rounded-full px-5 py-3 text-[14px] font-medium text-fg transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  Visit the live site
+                  <ArrowUpRight className="size-4" />
+                </a>
+              )}
+            </div>
           </Reveal>
         </div>
 

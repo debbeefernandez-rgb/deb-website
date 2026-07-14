@@ -13,9 +13,49 @@ export type Project = {
   approach: string;
   highlights: { heading: string; body: string }[];
   brief: string;
+  liveUrl?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: "adreil-co",
+    title: "Adreil & Co.",
+    category: "Website",
+    year: "2026",
+    client: "Destination wedding photographer",
+    blurb:
+      "An editorial website for a Filipino destination wedding photographer working across the US, the Philippines, and worldwide. Built to feel like a fashion magazine and turn international browsers into booked inquiries.",
+    outcome: "Every inquiry lands, none dropped",
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind 4",
+      "Motion",
+      "Lenis",
+      "Web3Forms",
+      "Vercel",
+    ],
+    image: "/images/work-adreil.webp",
+    imageAlt:
+      "The Adreil & Co. homepage: a cinematic golden-hour hero for a destination wedding photographer",
+    problem:
+      "Adreil's photography is warm, cinematic, editorial. His site didn't match it. Couples planning an international wedding have to trust a photographer they have never met before they book, and the old presence gave them no reason to.",
+    approach:
+      "I designed and built the whole thing from scratch: the editorial visual language, the component system, the content, a conversational inquiry flow, the SEO and AI-discoverability layer, and the production deploy. Restrained, premium, and mobile-first, because most couples browse on their phones.",
+    highlights: [
+      {
+        heading: "A portfolio built for browsing",
+        body: "Full wedding stories instead of highlight reels, filterable by region, each opening into its own cinematic gallery. The inquiry flow is a short, conversational path, not a wall of form fields.",
+      },
+      {
+        heading: "Engineered to never lose a lead",
+        body: "I rebuilt the inquiry pipeline on Web3Forms after diagnosing an outage-prone backend, added a silent honeypot so bots drop without captcha friction, and hardened the site with a full security-header suite. 100% static, sub-second loads, and readable by AI answer engines.",
+      },
+    ],
+    brief: "look as good as my photos",
+    liveUrl: "https://adreil.com",
+  },
   {
     slug: "ai-compliance-checker",
     title: "AI Compliance Checker",
