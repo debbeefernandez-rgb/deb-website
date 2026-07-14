@@ -57,6 +57,36 @@ export const projects: Project[] = [
     liveUrl: "https://adreil.com",
   },
   {
+    slug: "rotypeaks",
+    title: "RotyPeaks Ridge Camp",
+    category: "Website",
+    year: "2026",
+    client: "Mountain campsite, Bukidnon",
+    blurb:
+      "A redesign and full rebuild for a viral mountain campsite in Bukidnon. Sell the right product, load 7x faster, and feel like standing on the ridge.",
+    outcome: "6.7s to 0.9s load, 7x faster",
+    stack: ["HTML", "CSS", "Vanilla JS", "Vercel"],
+    image: "/images/work-rotypeaks.webp",
+    imageAlt:
+      "The RotyPeaks homepage: a scenic mountain view hero over a sea of clouds in Bukidnon",
+    problem:
+      "RotyPeaks is a ridge campground famous for 360 mountain views, a sea of clouds, and a comfort room that went viral on TikTok. The site matched none of it. It led with camping when most of the revenue comes from ₱350 day tours, the main photo took 6.7 seconds to appear on mobile data, and duplicate listings plus an open contact form were pulling in spam and fake bookings.",
+    approach:
+      "I redesigned the brand experience and rebuilt the site from scratch in plain HTML, CSS, and vanilla JavaScript. No framework, no build step, nothing between the visitor and the view. The hero now opens with the scenery, the day tours that actually earn sit at the top, and every stay has its own page.",
+    highlights: [
+      {
+        heading: "Revenue-first, and 7x faster",
+        body: "The main photo went from 6.7 seconds to 0.9, and Google PageSpeed from 60 to 95, with 100 on best practices and SEO. Day tours lead, duplicates are gone, and guests arrive with the right expectations.",
+      },
+      {
+        heading: "Immersive without a framework",
+        body: "Clouds drift across the hero, fog rolls under the ridge, the logo rises out of the mountains on scroll, and a slider compares sunrise against sunset. A webp photo pipeline and a closed booking funnel ended the spam problem outright.",
+      },
+    ],
+    brief: "sell the day tours, load fast",
+    liveUrl: "https://rotypeaks.vercel.app",
+  },
+  {
     slug: "ai-compliance-checker",
     title: "AI Compliance Checker",
     category: "AI product",

@@ -39,7 +39,7 @@ export default function WorkPage() {
           <div className="glass mt-16 flex flex-wrap items-center gap-5 rounded-2xl p-8 sm:p-10">
             <div className="grow">
               <h2 className="display text-[22px]">
-                Your project could be number seven.
+                Your project could be number nine.
               </h2>
               <p className="mt-2 max-w-[48ch] text-[15px] text-muted">
                 Tell me what you need and I will tell you in 24 hours if I can
