@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     template: "%s · Deb Fernandez",
   },
   description: site.description,
+  keywords: site.keywords,
   openGraph: {
     title: site.title,
     description: site.description,
@@ -49,20 +50,59 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const personSchema = {
+/*
+  A @graph with the person and the service she offers. areaServed lists
+  Bukidnon and the Philippines so local search and AI answer engines know
+  she takes work there, while keeping worldwide remote scope. All honest:
+  based in PH, serving Bukidnon remotely (RotyPeaks is the proof).
+*/
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Deb Fernandez",
-  jobTitle: "Product Developer & Designer",
-  email: site.email,
-  url: site.url,
-  sameAs: [site.instagram, site.blog],
-  address: { "@type": "PostalAddress", addressCountry: "PH" },
-  knowsAbout: [
-    "Product development",
-    "Brand design",
-    "AI automation",
-    "Web development",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${site.url}/#deb`,
+      name: "Deb Fernandez",
+      jobTitle: "Web Designer & Product Developer",
+      email: site.email,
+      url: site.url,
+      image: `${site.url}/og.png`,
+      sameAs: [site.instagram, site.blog],
+      address: { "@type": "PostalAddress", addressCountry: "PH" },
+      knowsAbout: [
+        "Web design",
+        "Web development",
+        "Next.js",
+        "React",
+        "Brand design",
+        "AI automation",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${site.url}/#service`,
+      name: "Deb Fernandez — Web Design & Development",
+      description: site.description,
+      url: site.url,
+      image: `${site.url}/og.png`,
+      email: site.email,
+      priceRange: "$$",
+      provider: { "@id": `${site.url}/#deb` },
+      founder: { "@id": `${site.url}/#deb` },
+      address: { "@type": "PostalAddress", addressCountry: "PH" },
+      areaServed: [
+        { "@type": "AdministrativeArea", name: "Bukidnon" },
+        { "@type": "Country", name: "Philippines" },
+        { "@type": "Place", name: "Worldwide (remote)" },
+      ],
+      serviceType: [
+        "Web design",
+        "Web development",
+        "Brand design",
+        "AI automation",
+      ],
+      sameAs: [site.instagram, site.blog],
+    },
   ],
 };
 
@@ -88,7 +128,7 @@ export default function RootLayout({
         </Providers>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </body>
     </html>

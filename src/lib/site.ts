@@ -1,8 +1,20 @@
 export const site = {
   name: "Deb Fernandez",
-  title: "Deb Fernandez · Product Developer & Designer",
+  title: "Deb Fernandez · Web Designer & Product Developer",
   description:
-    "Designer turned product developer in the Philippines. I design brands and build working software with AI tools like Claude and Cursor. One person, idea to live product.",
+    "Web designer and developer in the Philippines. I design brands and build fast, modern websites and software with AI tools like Claude and Cursor. Working with clients from Manila to Bukidnon and worldwide.",
+  keywords: [
+    "web designer Philippines",
+    "web developer Philippines",
+    "web designer Bukidnon",
+    "web developer Bukidnon",
+    "website design Bukidnon",
+    "freelance web developer Philippines",
+    "Next.js developer Philippines",
+    "AI product developer",
+    "brand designer Philippines",
+    "Deb Fernandez",
+  ],
   url: "https://debfernandez.com",
   email: "deb@debfernandez.com",
   calendly: "https://calendly.com/debfernandez/15min?back=1",
@@ -171,6 +183,10 @@ export const faqs = [
   {
     q: "What do you charge?",
     a: "Fixed price per project, agreed before we start. It depends on scope, so the honest answer comes after a 15 minute call. What I can promise: no hourly billing, no surprise invoices, and no agency markup, because there's no agency.",
+  },
+  {
+    q: "Do you work with businesses in Bukidnon and outside Manila?",
+    a: "Yes. I'm based in the Philippines and work remotely with clients anywhere, from Bukidnon to the US. I rebuilt the website for RotyPeaks Ridge Camp in Impasug-ong, Bukidnon, and made it load 7 times faster. Distance doesn't change the work: you get a live link from day one and you own everything at the end, wherever you are.",
   },
 ];
 
