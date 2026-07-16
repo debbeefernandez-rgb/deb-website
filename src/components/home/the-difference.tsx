@@ -30,9 +30,8 @@ export function TheDifference() {
             <h2 className="display text-[clamp(2.2rem,4.8vw,3.8rem)] leading-[1.02]">
               <RevealLines
                 lines={[
-                  "The AI types.",
-                  <span key="2" className="text-glint">
-                    The thinking is mine.
+                  <span key="1">
+                    Why <span className="text-glint">trust me?</span>
                   </span>,
                 ]}
               />
