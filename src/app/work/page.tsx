@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
 import { SectionHeading } from "@/components/section-heading";
 import { ProjectCard } from "@/components/project-card";
-import { BriefToBuild } from "@/components/brief-to-build";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/buttons";
 
@@ -25,12 +24,10 @@ export default function WorkPage() {
               not <span className="text-glint">staged.</span>
             </span>,
           ]}
-          lede="Real builds, real outcomes. Here is how one starts."
+          lede="Real builds, real outcomes."
         />
 
-        <BriefToBuild />
-
-        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
             <Reveal key={p.slug} delay={Math.min((i % 2) * 0.08, 0.2)} className="h-full">
               <ProjectCard project={p} priority={i < 2} />
