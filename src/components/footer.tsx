@@ -91,7 +91,7 @@ export function Footer() {
               <LocalClock /> · GMT+8
             </p>
             <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-faint uppercase">
-              Bukidnon, Philippines
+              Philippines
             </p>
           </div>
           <div>
@@ -109,7 +109,7 @@ export function Footer() {
         <div className="mt-14 flex flex-col gap-3 border-t border-line pt-7 text-[12.5px] text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Deb Fernandez. All rights reserved.</p>
           <p className="font-mono text-[11px] tracking-[0.14em] uppercase">
-            Bukidnon · GMT+8
+            Philippines · GMT+8
           </p>
         </div>
       </div>

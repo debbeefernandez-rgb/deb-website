@@ -146,7 +146,7 @@ export default function PricingPage() {
 
         <Reveal delay={0.2}>
           <p className="mt-8 font-mono text-[11px] tracking-[0.18em] text-faint uppercase">
-            Bukidnon, Philippines · GMT+8 · async with US and EU · prices in
+            Philippines · GMT+8 · async with US and EU · prices in
             PHP, billed at
             the USD equivalent
           </p>

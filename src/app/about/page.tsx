@@ -7,7 +7,7 @@ import { Button } from "@/components/buttons";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Web designer and product developer based in Bukidnon, Philippines. Five years of brand work, now building full products with AI tools. Also: Hyrox, horses, and three brown dogs.",
+    "Web designer and product developer in the Philippines. Five years of brand work, now building full products with AI tools. Also: Hyrox, horses, and three brown dogs.",
 };
 
 const traits = [
@@ -49,8 +49,7 @@ export default function AboutPage() {
         </h1>
         <Reveal delay={0.15}>
           <p className="mt-7 max-w-[56ch] text-[18px] leading-relaxed text-muted">
-            Designer turned product developer based in Bukidnon, Philippines.
-            Five years
+            Designer turned product developer in the Philippines. Five years
             making founders, online stores, and TEDx speakers look good. Now I
             build them working software too.
           </p>
@@ -73,7 +72,7 @@ export default function AboutPage() {
               />
             </div>
             <p className="mt-4 font-mono text-[11px] tracking-[0.16em] text-muted uppercase">
-              Deb · Web designer & developer · Bukidnon, PH · GMT+8
+              Deb · Web designer & developer · PH · GMT+8
             </p>
           </div>
         </Reveal>
