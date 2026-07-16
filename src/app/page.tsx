@@ -1,9 +1,9 @@
 import { Hero } from "@/components/home/hero";
 import { Proof } from "@/components/home/proof";
-import { MeetDeb } from "@/components/home/meet-deb";
+import { SpotDifference } from "@/components/home/spot-difference";
 import { SelectedWork } from "@/components/home/selected-work";
+import { TheDifference } from "@/components/home/the-difference";
 import { Services } from "@/components/home/services";
-import { Compare } from "@/components/home/compare";
 import { Testimonials } from "@/components/home/testimonials";
 import { Faq } from "@/components/home/faq";
 import { HomeCta } from "@/components/home/cta";
@@ -24,10 +24,10 @@ export default function Home() {
     <>
       <Hero />
       <Proof />
-      <MeetDeb />
+      <SpotDifference />
       <SelectedWork />
+      <TheDifference />
       <Services />
-      <Compare />
       <Testimonials />
       <Faq />
       <HomeCta />

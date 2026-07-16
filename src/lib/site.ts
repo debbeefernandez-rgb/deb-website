@@ -70,43 +70,37 @@ export const services: Service[] = [
   {
     index: "01",
     title: "Product build",
-    pitch:
-      "Your idea as working software. I design it, build it with Claude and Cursor, and put it live on Vercel. You watch it take shape daily.",
+    pitch: "Your idea as working software, live in a week.",
     deliverables: [
-      "Web app, dashboard, or internal tool",
-      "Landing page or full marketing site",
-      "Custom Shopify or headless storefront",
-      "Deployed, tested, and handed over",
+      "Web app, dashboard, or tool",
+      "Landing page or full site",
+      "Shopify or headless store",
     ],
-    goodFor: "Founders who need an MVP without hiring a dev team",
+    goodFor: "Founders who need an MVP",
     timeline: "1 week max",
   },
   {
     index: "02",
     title: "Brand and content",
-    pitch:
-      "The face of your company. Identity, social content, email campaigns. Five years and 2,000+ designs deep, this is where I started.",
+    pitch: "The face of your business, built to convert.",
     deliverables: [
-      "Logo, brand system, and guidelines",
-      "Social content systems and templates",
-      "Email flows, campaigns, and newsletters",
+      "Logo and brand system",
+      "Social and email content",
       "Ad creative at volume",
     ],
-    goodFor: "Teams that need to look bigger than they are",
+    goodFor: "Teams that need to look bigger",
     timeline: "1 week max",
   },
   {
     index: "03",
     title: "AI systems",
-    pitch:
-      "Software that does the boring work for you. Content engines, compliance checks, internal copilots. Built around your real workflow, not a demo.",
+    pitch: "Software that does the boring work for you.",
     deliverables: [
-      "Custom AI agents and assistants",
-      "Content and marketing automation",
+      "Custom agents and assistants",
+      "Content automation",
       "Review and approval pipelines",
-      "SEO and AI search setup",
     ],
-    goodFor: "Teams drowning in repetitive work",
+    goodFor: "Teams stuck in repetitive work",
     timeline: "2 weeks max",
   },
 ];

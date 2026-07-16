@@ -10,13 +10,6 @@ export const metadata: Metadata = {
     "Web designer and product developer in the Philippines. Five years of brand work, now building full products with AI tools. Also: Hyrox, horses, and three brown dogs.",
 };
 
-const traits = [
-  { k: "Reliable", v: "Easy to work with" },
-  { k: "Proactive", v: "Results driven" },
-  { k: "Strategic", v: "Creative with intent" },
-  { k: "Flexible", v: "Quick to adapt" },
-];
-
 const grit = [
   { k: "Endurance", v: "No fade in week six" },
   { k: "Pacing", v: "Sprint when it matters" },
@@ -49,9 +42,8 @@ export default function AboutPage() {
         </h1>
         <Reveal delay={0.15}>
           <p className="mt-7 max-w-[56ch] text-[18px] leading-relaxed text-muted">
-            Designer turned product developer in the Philippines. Five years
-            making founders, online stores, and TEDx speakers look good. Now I
-            build them working software too.
+            I built brands by hand for five years. Now I build products with
+            AI. That order matters.
           </p>
         </Reveal>
       </section>
@@ -80,44 +72,18 @@ export default function AboutPage() {
         <div className="flex flex-col gap-7">
           <Reveal>
             <p className="text-[clamp(1.3rem,2.4vw,1.7rem)] leading-snug font-medium tracking-[-0.015em]">
-              I build the whole stack. Software, AI, visibility, brand,
-              eCommerce, and trading, end to end. You own everything I make.
+              I build the whole stack. Software, AI, brand, eCommerce, end to
+              end. You own everything I make.
             </p>
           </Reveal>
-          <Reveal delay={0.06}>
+          <Reveal delay={0.08}>
             <p className="text-[16.5px] leading-relaxed text-muted">
-              Five years supporting eCom stores, service providers, and
-              Forbes-featured founders who have built business after business.
-              I picked up how they think, and which parts of a page actually
-              earn: what converts, what to cut, where the money is.
+              Engineering degree. Time inside a cybersecurity company. Five
+              years with eCommerce brands and Forbes-featured founders. Then
+              AI arrived and I went all in. Everything on my work page runs in
+              production.
             </p>
           </Reveal>
-          <Reveal delay={0.09}>
-            <p className="text-[16.5px] leading-relaxed text-muted">
-              I also spent time inside a cybersecurity company, so I build with
-              security and compliance in mind instead of learning it the hard
-              way after launch.
-            </p>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="text-[16.5px] leading-relaxed text-muted">
-              Then AI changed what one person can build. I went all in. I
-              learned to direct Claude, Cursor, and Lovable the way I direct a
-              design file, and started shipping real software: dashboards,
-              automations, full products. The things on my work page are not
-              mockups. They run in production.
-            </p>
-          </Reveal>
-          <Reveal delay={0.14}>
-            <p className="text-[16.5px] leading-relaxed text-muted">
-              And no, I don&apos;t have a computer science degree. Mine is in
-              mining engineering. Engineering taught me systems, design gave me
-              taste, marketing taught me what sells, and AI gave me leverage.
-              That combination used to take a team. Now you can hire it as one
-              person.
-            </p>
-          </Reveal>
-
           <Reveal delay={0.16}>
             <div>
               <p className="eyebrow">The paper trail</p>
@@ -139,22 +105,6 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.15}>
-            <div className="grid grid-cols-2 overflow-hidden rounded-2xl border border-line sm:grid-cols-4">
-              {traits.map((t, i) => (
-                <div
-                  key={t.k}
-                  className={`p-5 ${i > 0 ? "border-l border-line max-sm:[&:nth-child(3)]:border-l-0" : ""} ${i >= 2 ? "max-sm:border-t max-sm:border-line" : ""}`}
-                >
-                  <p className="text-[15px] font-semibold">{t.k}</p>
-                  <p className="mt-1.5 font-mono text-[10px] tracking-[0.12em] text-muted uppercase">
-                    {t.v}
-                  </p>
-                </div>
-              ))}
             </div>
           </Reveal>
 
@@ -247,8 +197,7 @@ export default function AboutPage() {
             <Reveal delay={0.12}>
               <p className="mt-6 text-[16.5px] leading-relaxed text-muted">
                 Eight runs, eight stations, one clock. Long projects are the
-                same shape: not a sprint, a hybrid race. I train for that
-                exact thing on purpose.
+                same shape.
               </p>
             </Reveal>
             <Reveal delay={0.18}>
@@ -270,12 +219,6 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-            </Reveal>
-            <Reveal delay={0.22}>
-              <p className="mt-6 text-[14px] leading-relaxed text-muted">
-                Short version: when your launch week gets ugly, I don&apos;t
-                fold. I have paid money to suffer more than this.
-              </p>
             </Reveal>
           </div>
         </div>
@@ -305,25 +248,16 @@ export default function AboutPage() {
             </h2>
             <Reveal delay={0.12}>
               <p className="mt-6 text-[16.5px] leading-relaxed text-muted">
-                My favorite color is pink. But the three brown dogs in this
-                photo outvoted me. Warm earth tones, amber accents, cream on
-                charcoal: it all traces back to them. Loyal, calm, slightly
-                chaotic. Same energy I aim for in the work.
-              </p>
-            </Reveal>
-            <Reveal delay={0.16}>
-              <p className="mt-4 text-[16.5px] leading-relaxed text-muted">
-                Weekends I&apos;m on horseback. Riding teaches the same things
-                good product work does: patience, presence, and listening.
+                My favorite color is pink. The three brown dogs outvoted me.
+                Weekends, I&apos;m on horseback.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="glass-accent mt-7 rounded-2xl p-6">
                 <p className="eyebrow text-accent-bright">Trust note</p>
                 <p className="mt-3 text-[15px] leading-relaxed">
-                  You&apos;re hiring a person, not a process. Real name, real
-                  face, real timezone. I show up, follow through, and tell you
-                  the truth about scope.
+                  You&apos;re hiring a person, not a process. I show up and
+                  tell you the truth about scope.
                 </p>
               </div>
             </Reveal>
@@ -387,27 +321,23 @@ export default function AboutPage() {
               <div>
                 <p className="eyebrow">How</p>
                 <p className="mt-3 text-[14.5px] leading-relaxed text-muted">
-                  Designed in code with Claude. No template, no page builder.
-                  Every section written, reviewed, and shipped by me directing
-                  the AI.
+                  Designed in code with Claude. No template.
                 </p>
               </div>
               <div>
                 <p className="eyebrow">Stack</p>
                 <p className="mt-3 text-[14.5px] leading-relaxed text-muted">
-                  Next.js, TypeScript, Tailwind, Motion, deployed on Vercel.
-                  Type set in Geist and Geist Mono, self-hosted.
+                  Next.js, Tailwind, Motion, Geist.
                 </p>
               </div>
               <div>
                 <p className="eyebrow">Details</p>
                 <p className="mt-3 text-[14.5px] leading-relaxed text-muted">
-                  Press {""}
+                  Press{" "}
                   <kbd className="rounded border border-line px-1.5 py-0.5 font-mono text-[11px]">
                     ⌘K
-                  </kbd>{" "}
-                  anywhere. Click the logo dot. Everything respects reduced
-                  motion. Images under 1MB total.
+                  </kbd>
+                  . Click the logo dot.
                 </p>
               </div>
             </div>

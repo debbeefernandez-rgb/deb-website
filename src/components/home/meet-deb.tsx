@@ -28,7 +28,7 @@ const facts = [
   past it on touch screens) wipes in the AI version of the same portrait,
   the same left-to-right reveal the manifesto lines use.
 */
-function OrbitalPortrait() {
+export function OrbitalPortrait() {
   const circleRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
   const [hoverCapable] = useState(

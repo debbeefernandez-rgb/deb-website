@@ -23,7 +23,6 @@ export function Faq() {
                   you <span className="text-glint">should ask.</span>
                 </span>,
               ]}
-              lede="Including the awkward one about my background. Ask me anything else on a call."
             />
           </div>
 

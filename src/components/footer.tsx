@@ -36,8 +36,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Logo />
             <p className="mt-4 max-w-[26ch] text-[13.5px] leading-relaxed text-muted">
-              Product developer and designer. One person, idea to live
-              product.
+              Design, code, AI. One person.
             </p>
           </div>
           <div>

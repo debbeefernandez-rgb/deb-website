@@ -27,8 +27,7 @@ export function HomeCta() {
               />
             </h2>
             <p className="mx-auto mt-7 max-w-[46ch] text-[16.5px] leading-relaxed opacity-70">
-              Brand, website, AI system, or the whole product. Tell me what
-              you have in mind and I will tell you in 24 hours if I can help.
+              Tell me what you have in mind. I reply within 24 hours.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
               <Magnetic>

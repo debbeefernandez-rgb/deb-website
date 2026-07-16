@@ -19,7 +19,6 @@ export function SelectedWork() {
                 real <span className="text-glint">results.</span>
               </span>,
             ]}
-            lede="Projects that shipped and did their job. Actual screenshots, not mockups."
           />
           <Reveal delay={0.2}>
             <Link

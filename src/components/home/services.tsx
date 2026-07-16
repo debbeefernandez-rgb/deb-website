@@ -18,7 +18,7 @@ export function Services() {
               to <span className="text-glint">use me.</span>
             </span>,
           ]}
-          lede="Every project is one person doing the whole job: design, build, ship. Pick a lane or mix them, most clients do."
+          lede="One person does the whole job. Pick a lane or mix them."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-5 lg:grid-cols-3">
