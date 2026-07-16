@@ -93,16 +93,16 @@ export default function ContactPage() {
             <div>
               <p className="eyebrow">Not ready to talk?</p>
               <p className="mt-2.5 max-w-[44ch] text-[15px] leading-relaxed text-muted">
-                Build a project brief in 30 seconds and send it when you are.
-                Or just lurk on Instagram, mostly the dogs.
+                See the work first, or just lurk on Instagram, mostly the
+                dogs.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/#brief"
+                href="/work"
                 className="glass shine rounded-full px-5 py-2.5 text-[14px] font-medium transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Brief builder
+                See the work
               </Link>
               <a
                 href={site.instagram}

@@ -15,7 +15,7 @@ export function Faq() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1.4fr]">
           <div>
             <SectionHeading
-              index="07"
+              index=""
               eyebrow="Straight answers"
               lines={[
                 "The questions",

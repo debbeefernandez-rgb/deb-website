@@ -11,7 +11,7 @@ export function SelectedWork() {
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
-            index="01"
+            index=""
             eyebrow="Selected work"
             lines={[
               "Real builds,",
@@ -19,7 +19,7 @@ export function SelectedWork() {
                 real <span className="text-glint">results.</span>
               </span>,
             ]}
-            lede="Six projects that shipped and did their job. These are actual screenshots of things I made, not mockups."
+            lede="Projects that shipped and did their job. Actual screenshots, not mockups."
           />
           <Reveal delay={0.2}>
             <Link

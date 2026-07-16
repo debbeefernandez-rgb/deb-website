@@ -10,7 +10,7 @@ export function Services() {
     <section className="relative border-t border-line bg-bg-deep py-28 sm:py-36">
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <SectionHeading
-          index="02"
+          index=""
           eyebrow="What I do"
           lines={[
             "Three ways",

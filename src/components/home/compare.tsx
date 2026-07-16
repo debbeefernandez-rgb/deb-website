@@ -16,7 +16,7 @@ export function Compare() {
               or <span className="text-glint">a template?</span>
             </span>,
           ]}
-          lede="Anyone can generate a website now, and most of it looks the same. Here is the honest difference between doing it yourself, hiring an agency, and hiring me."
+          lede="The honest difference between doing it yourself, hiring an agency, and hiring me."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -79,10 +79,10 @@ export function Compare() {
         </div>
 
         <Reveal delay={0.15}>
-          <p className="mx-auto mt-12 max-w-[62ch] text-center text-[16px] leading-relaxed text-muted">
-            The value was never the AI. It is the taste to make it yours, the
-            rigor to make it hold up, and the time to actually finish.{" "}
-            <span className="text-fg">That is the part you are hiring.</span>
+          <p className="mx-auto mt-12 max-w-[50ch] text-center text-[16px] leading-relaxed text-muted">
+            The value was never the AI. It&apos;s the taste, the rigor, and the
+            time to finish.{" "}
+            <span className="text-fg">That is what you are hiring.</span>
           </p>
         </Reveal>
       </div>

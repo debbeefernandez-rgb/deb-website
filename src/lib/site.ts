@@ -162,35 +162,23 @@ export const testimonials = [
 export const faqs = [
   {
     q: "If it's just AI, why can't I do it myself?",
-    a: "You can start. Most people stall at the hard 80%, because raw AI output is generic by default. Prompt the same thing your competitor does and you get the same website. Making it look like you and actually work takes taste, judgment, and a lot of careful prompting, and it takes time you probably do not have. That is the job. You bring the idea, I bring the execution.",
-  },
-  {
-    q: "You're not a software engineer. Why should I trust you with this?",
-    a: "I trained as an engineer, spent five years as a designer, and worked inside a cybersecurity company, so I build with security and compliance in mind, not as an afterthought. I direct AI tools like Claude and Cursor to write the code, then I review, test, and ship it. The products on this site run in production right now, and you can test one live before you pay me anything. If a project needs deep systems engineering or a formal security audit, I will tell you straight and help you find the right person.",
+    a: "You can start. Most people stall at the hard 80%, because raw AI output is generic. You bring the idea, I bring the taste, the judgment, and the time to actually finish it.",
   },
   {
     q: "Isn't AI-built work just generic?",
-    a: "By default, yes. That is exactly the problem I solve. The AI is a tool that types fast. Left alone it gives everyone the same result. The difference is the human directing it: the design eye to make it yours, the engineering rigor to make it hold up, and the prompting skill to pull real work out of the tool instead of a template. You are not paying for the AI. You are paying for the judgment.",
+    a: "By default, yes. That's the problem I solve. Left alone, AI gives everyone the same result. You're not paying for the AI, you're paying for the human directing it.",
   },
   {
     q: "How fast is fast?",
-    a: "A landing page in days. A product build or a brand package in a week, tops. AI systems in two. I give you a real date in the brief before we start, and you see progress on a live link daily, so you never have to wonder.",
+    a: "A landing page in days. A product build or brand package in a week, tops. AI systems in two. You get a real date upfront and a live link from day one.",
   },
   {
     q: "Who owns the work?",
-    a: "You do. All of it. The code lives in your repo, the design files in your accounts, the domain in your name. No lock-in, no hostage fees, no monthly ransom to keep your own product.",
-  },
-  {
-    q: "What happens if it breaks after launch?",
-    a: "I fix it. Every build includes a support window after launch, and because everything is documented and in your hands, any developer can pick it up later. You're not stuck with me, you just might want to keep me.",
+    a: "You do, all of it. The code, the files, the domain, in your name. No lock-in, no hostage fees.",
   },
   {
     q: "What do you charge?",
-    a: "Fixed price per project, agreed before we start. It depends on scope, so the honest answer comes after a 15 minute call. What I can promise: no hourly billing, no surprise invoices, and no agency markup, because there's no agency.",
-  },
-  {
-    q: "Do you work with clients remotely?",
-    a: "Yes. I work remotely with clients across the Philippines and worldwide. You get a live link from day one and you own everything at the end, wherever you are.",
+    a: "Fixed price per project, agreed before we start. No hourly billing, no surprise invoices, no agency markup. The honest number comes after a 15 minute call.",
   },
 ];
 
@@ -245,9 +233,7 @@ export const compareDims = [
   "The design",
   "The AI",
   "Security & compliance",
-  "Speed",
   "The cost",
-  "What you own",
   "The result",
 ];
 
@@ -268,11 +254,9 @@ export const compareColumns: CompareColumn[] = [
       "You, learning as you go at night",
       "Looks like the template it is",
       "You fight the tool, the tool wins",
-      "Not on your radar until something breaks",
-      "Fast to start, stuck at the hard 80%",
+      "Not on your radar until it breaks",
       "Cheap upfront, expensive in your hours",
-      "A half-built thing you cannot extend",
-      "Looks DIY, and your customers notice",
+      "Looks DIY, and customers notice",
     ],
   },
   {
@@ -280,14 +264,12 @@ export const compareColumns: CompareColumn[] = [
     label: "A typical agency",
     sub: "A team, an office, and a markup",
     rows: [
-      "A junior you never meet, behind an account manager",
-      "On-brand-ish, designed by committee",
-      "AI used as a buzzword, same slow process",
+      "A junior you never meet",
+      "On-brand-ish, by committee",
+      "AI as a buzzword, same slow process",
       "A checklist item, if that",
-      "Weeks of meetings before anything ships",
-      "Markup for the team, the office, the overhead",
-      "Locked into their platform and retainers",
-      "Fine, forgettable, and over budget",
+      "Markup for the team and the overhead",
+      "Fine, forgettable, over budget",
     ],
   },
   {
@@ -297,13 +279,11 @@ export const compareColumns: CompareColumn[] = [
     featured: true,
     rows: [
       "Me, start to finish. You talk to the person building it",
-      "Editorial and built to convert, from five years of design work",
-      "An expert operator. I direct the AI, it does not direct me",
+      "Editorial, and built to convert",
+      "An expert operator. I direct the AI, not the reverse",
       "Built in. I worked inside a cybersecurity company",
-      "Days to weeks, with a live link from day one",
-      "Fixed price, no agency markup, no team to feed",
-      "The repo, the files, the accounts. No lock-in",
-      "Premium, working, and shipped on time",
+      "Fixed price, no agency markup",
+      "Premium, working, shipped on time",
     ],
   },
 ];

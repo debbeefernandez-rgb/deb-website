@@ -20,7 +20,7 @@ export function Testimonials() {
     <section className="border-t border-line py-28 sm:py-36">
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <SectionHeading
-          index="06"
+          index=""
           eyebrow="Word of mouth"
           lines={[
             "People who",

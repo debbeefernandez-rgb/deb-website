@@ -210,20 +210,11 @@ export function MeetDeb() {
           </h2>
           <Reveal delay={0.15}>
             <p className="mt-7 max-w-[52ch] text-[17px] leading-relaxed text-fg/85">
-              I&apos;m not an agency and not a hobbyist with a template. I
-              trained as an engineer, spent five years as a designer, and
-              worked inside a cybersecurity company. Now I direct AI tools like
-              Claude and Cursor with judgment most people using them do not
-              have.
-            </p>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-4 max-w-[52ch] text-[15.5px] leading-relaxed text-muted">
-              That mix is the point. A designer&apos;s eye so it does not look
-              generic. An engineer&apos;s rigor so it holds up. A marketer&apos;s
-              sense for what actually converts, from years with eCommerce brands
-              and Forbes-featured founders. The AI is the tool. The thinking is
-              mine.
+              Not an agency, not a hobbyist with a template. I trained as an
+              engineer, spent five years designing for eCommerce brands and
+              Forbes-featured founders, and worked inside a cybersecurity
+              company. A designer&apos;s eye, an engineer&apos;s rigor, a sense
+              for what converts. The AI types. The thinking is mine.
             </p>
           </Reveal>
 

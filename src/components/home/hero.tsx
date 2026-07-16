@@ -134,12 +134,11 @@ export function Hero() {
 
         <motion.p
           {...fade(0.5)}
-          className="mt-8 max-w-[54ch] text-[17px] leading-relaxed text-muted sm:text-[18px]"
+          className="mt-8 max-w-[46ch] text-[17px] leading-relaxed text-muted sm:text-[18px]"
         >
-          Anyone can generate a website now, and most of it looks the same.
-          I&apos;m the designer and engineer who makes yours look like you and
-          actually work, built with AI I have genuinely mastered, not the
-          generic output everyone else ships.
+          Anyone can generate with AI now. It all looks the same. I&apos;m the
+          designer and engineer who makes yours look like you and actually
+          work.
         </motion.p>
 
         <motion.p
