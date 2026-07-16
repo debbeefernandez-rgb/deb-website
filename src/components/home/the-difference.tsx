@@ -9,7 +9,7 @@ import { OrbitalPortrait } from "./meet-deb";
 
 const trust = [
   { k: "Built by hand first", v: "Five years of design before AI" },
-  { k: "Engineer trained", v: "Plus time inside a cybersecurity company" },
+  { k: "Security aware", v: "Worked inside a cybersecurity company" },
   { k: "Built to convert", v: "Learned from eCommerce and Forbes founders" },
 ];
 

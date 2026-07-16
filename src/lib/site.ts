@@ -275,7 +275,7 @@ export const compareColumns: CompareColumn[] = [
       "Me, start to finish. You talk to the person building it",
       "Editorial, and built to convert",
       "An expert operator. I direct the AI, not the reverse",
-      "Built in. I worked inside a cybersecurity company",
+      "Cyber-aware, from years inside a cybersecurity company",
       "Fixed price, no agency markup",
       "Premium, working, shipped on time",
     ],

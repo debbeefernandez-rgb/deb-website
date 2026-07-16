@@ -210,11 +210,11 @@ export function MeetDeb() {
           </h2>
           <Reveal delay={0.15}>
             <p className="mt-7 max-w-[52ch] text-[17px] leading-relaxed text-fg/85">
-              Not an agency, not a hobbyist with a template. I trained as an
-              engineer, spent five years designing for eCommerce brands and
-              Forbes-featured founders, and worked inside a cybersecurity
-              company. A designer&apos;s eye, an engineer&apos;s rigor, a sense
-              for what converts. The AI types. The thinking is mine.
+              Not an agency, not a hobbyist with a template. Five years designing
+              for eCommerce brands and Forbes-featured founders, plus time
+              inside a cybersecurity company. A designer&apos;s eye, a sense
+              for what converts, security awareness built in. The AI types.
+              The thinking is mine.
             </p>
           </Reveal>
 
