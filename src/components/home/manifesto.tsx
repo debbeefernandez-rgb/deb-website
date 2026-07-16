@@ -10,9 +10,9 @@ import {
 } from "motion/react";
 
 const LINES = [
-  "AI made everyone fast.",
-  "And everyone looks the same.",
-  "I'm the difference.",
+  "Anyone can prompt.",
+  "Most ships flat and generic.",
+  "Hire experience and judgment.",
 ];
 
 function WipeLine({
@@ -92,10 +92,9 @@ export function Manifesto() {
             </>
           )}
         </h2>
-        <p className="mx-auto mt-10 max-w-[48ch] text-[18px] leading-relaxed text-muted sm:text-[20px]">
-          Same prompt as your competitor, same generic site. The value was
-          never the AI. It is the taste to make it yours, the rigor to make it
-          hold up, and the time to actually finish.
+        <p className="mx-auto mt-10 max-w-[44ch] text-[18px] leading-relaxed text-muted sm:text-[20px]">
+          The tools finish the job now, looking like everyone else&apos;s.
+          Experience and judgment are what you hire.
         </p>
       </div>
     </section>
