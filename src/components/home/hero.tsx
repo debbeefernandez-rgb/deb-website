@@ -126,18 +126,18 @@ export function Hero() {
 
       <div className="relative z-1 mx-auto w-full max-w-300 px-5 pt-32 pb-20 sm:px-7">
         <h1 className="display text-[clamp(3rem,8.4vw,7.5rem)] leading-[0.96]">
-          <Line delay={0.18}>AI makes it fast.</Line>
+          <Line delay={0.18}>I make cool shit</Line>
           <Line delay={0.28}>
-            <span className="text-glint">I make it yours.</span>
+            <span className="text-glint">that performs.</span>
           </Line>
         </h1>
 
         <motion.p
           {...fade(0.5)}
-          className="mt-8 max-w-[40ch] text-[17px] leading-relaxed text-muted sm:text-[18px]"
+          className="mt-8 max-w-[44ch] text-[17px] leading-relaxed text-muted sm:text-[18px]"
         >
-          I built brands and products by hand for five years. Now I build
-          them with AI. That order matters.
+          For startups and brands that want work that doesn&apos;t look
+          AI-generated. Built by hand for five years, faster with AI now.
         </motion.p>
 
         <motion.p
