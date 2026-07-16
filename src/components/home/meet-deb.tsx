@@ -210,15 +210,20 @@ export function MeetDeb() {
           </h2>
           <Reveal delay={0.15}>
             <p className="mt-7 max-w-[52ch] text-[17px] leading-relaxed text-fg/85">
-              You hand off the messy half, the brand and the software behind
-              it, and get back a finished thing. Half my week is design, half
-              is directing AI that builds the rest.
+              I&apos;m not an agency and not a hobbyist with a template. I
+              trained as an engineer, spent five years as a designer, and
+              worked inside a cybersecurity company. Now I direct AI tools like
+              Claude and Cursor with judgment most people using them do not
+              have.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-4 max-w-[52ch] text-[15.5px] leading-relaxed text-muted">
-              No agency markup. No junior handoff. Just me, start to finish,
-              with the receipts to prove it.
+              That mix is the point. A designer&apos;s eye so it does not look
+              generic. An engineer&apos;s rigor so it holds up. A marketer&apos;s
+              sense for what actually converts, from years with eCommerce brands
+              and Forbes-featured founders. The AI is the tool. The thinking is
+              mine.
             </p>
           </Reveal>
 

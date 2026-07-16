@@ -88,10 +88,19 @@ export default function AboutPage() {
           <Reveal delay={0.06}>
             <p className="text-[16.5px] leading-relaxed text-muted">
               Five years supporting eCom stores, service providers, and
-              Forbes-featured founders. Fast learner, clean execution.
+              Forbes-featured founders who have built business after business.
+              I picked up how they think, and which parts of a page actually
+              earn: what converts, what to cut, where the money is.
             </p>
           </Reveal>
-          <Reveal delay={0.08}>
+          <Reveal delay={0.09}>
+            <p className="text-[16.5px] leading-relaxed text-muted">
+              I also spent time inside a cybersecurity company, so I build with
+              security and compliance in mind instead of learning it the hard
+              way after launch.
+            </p>
+          </Reveal>
+          <Reveal delay={0.12}>
             <p className="text-[16.5px] leading-relaxed text-muted">
               Then AI changed what one person can build. I went all in. I
               learned to direct Claude, Cursor, and Lovable the way I direct a
@@ -100,21 +109,24 @@ export default function AboutPage() {
               mockups. They run in production.
             </p>
           </Reveal>
-          <Reveal delay={0.12}>
+          <Reveal delay={0.14}>
             <p className="text-[16.5px] leading-relaxed text-muted">
               And no, I don&apos;t have a computer science degree. Mine is in
-              mining engineering. Engineering taught me systems, design gave
-              me taste, AI gave me leverage. That combination used to take a
-              team. Now you can hire it as one person.
+              mining engineering. Engineering taught me systems, design gave me
+              taste, marketing taught me what sells, and AI gave me leverage.
+              That combination used to take a team. Now you can hire it as one
+              person.
             </p>
           </Reveal>
 
-          <Reveal delay={0.14}>
+          <Reveal delay={0.16}>
             <div>
               <p className="eyebrow">The paper trail</p>
               <ul className="mt-4 space-y-2.5">
                 {[
                   "B.S. Mining Engineering",
+                  "Worked inside a cybersecurity company (security & compliance aware)",
+                  "Five years with eCommerce brands and Forbes-featured founders",
                   "Trained with DICT, the Philippine government's ICT department",
                   "Certified Social Media Manager, Philippines",
                   "Adobe ecosystem since my journalism days",

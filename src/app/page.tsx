@@ -3,6 +3,7 @@ import { Proof } from "@/components/home/proof";
 import { MeetDeb } from "@/components/home/meet-deb";
 import { SelectedWork } from "@/components/home/selected-work";
 import { Services } from "@/components/home/services";
+import { Compare } from "@/components/home/compare";
 import { LiveDemo } from "@/components/home/live-demo";
 import { Process } from "@/components/home/process";
 import { Manifesto } from "@/components/home/manifesto";
@@ -30,6 +31,7 @@ export default function Home() {
       <MeetDeb />
       <SelectedWork />
       <Services />
+      <Compare />
       <LiveDemo />
       <Process />
       <Manifesto />

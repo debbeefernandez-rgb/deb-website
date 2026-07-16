@@ -134,11 +134,12 @@ export function Hero() {
 
         <motion.p
           {...fade(0.5)}
-          className="mt-8 max-w-[52ch] text-[17px] leading-relaxed text-muted sm:text-[18px]"
+          className="mt-8 max-w-[54ch] text-[17px] leading-relaxed text-muted sm:text-[18px]"
         >
-          Designer turned product developer. I design the brand, then build the
-          software with AI tools like Claude and Cursor. One person from idea
-          to live product. No dev team, no handoffs, no agency markup.
+          Anyone can generate a website now, and most of it looks the same.
+          I&apos;m the designer and engineer who makes yours look like you and
+          actually work, built with AI I have genuinely mastered, not the
+          generic output everyone else ships.
         </motion.p>
 
         <motion.p

@@ -161,12 +161,16 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: "You're not a software engineer. Why should I trust you with code?",
-    a: "I never claim to be one. I'm a product developer: I direct AI tools like Claude and Cursor to write the code, and I review, test, and ship the result. The products on this site run in production right now, and you can test one live before you pay me anything. If your project needs deep systems engineering or a security audit, I'll say so and help you find the right person.",
+    q: "If it's just AI, why can't I do it myself?",
+    a: "You can start. Most people stall at the hard 80%, because raw AI output is generic by default. Prompt the same thing your competitor does and you get the same website. Making it look like you and actually work takes taste, judgment, and a lot of careful prompting, and it takes time you probably do not have. That is the job. You bring the idea, I bring the execution.",
   },
   {
-    q: "What does vibe coding actually mean?",
-    a: "Building software by directing AI instead of typing every line by hand. I describe what I want, AI writes the code, and I steer, test, and refine until it works. It compresses months of dev work into days. The catch is you still need taste and judgment, and that's the part I bring.",
+    q: "You're not a software engineer. Why should I trust you with this?",
+    a: "I trained as an engineer, spent five years as a designer, and worked inside a cybersecurity company, so I build with security and compliance in mind, not as an afterthought. I direct AI tools like Claude and Cursor to write the code, then I review, test, and ship it. The products on this site run in production right now, and you can test one live before you pay me anything. If a project needs deep systems engineering or a formal security audit, I will tell you straight and help you find the right person.",
+  },
+  {
+    q: "Isn't AI-built work just generic?",
+    a: "By default, yes. That is exactly the problem I solve. The AI is a tool that types fast. Left alone it gives everyone the same result. The difference is the human directing it: the design eye to make it yours, the engineering rigor to make it hold up, and the prompting skill to pull real work out of the tool instead of a template. You are not paying for the AI. You are paying for the judgment.",
   },
   {
     q: "How fast is fast?",
@@ -233,6 +237,75 @@ export const briefDepths = [
   { key: "mvp", label: "Scrappy MVP", note: "The smallest thing that works" },
   { key: "polish", label: "Polished", note: "Production ready, on brand" },
   { key: "system", label: "Full system", note: "Documented so your team can extend it" },
+];
+
+/* Me vs a typical agency vs doing it yourself. */
+export const compareDims = [
+  "Who builds it",
+  "The design",
+  "The AI",
+  "Security & compliance",
+  "Speed",
+  "The cost",
+  "What you own",
+  "The result",
+];
+
+export type CompareColumn = {
+  key: string;
+  label: string;
+  sub: string;
+  featured?: boolean;
+  rows: string[];
+};
+
+export const compareColumns: CompareColumn[] = [
+  {
+    key: "diy",
+    label: "Do it yourself",
+    sub: "You plus a template or an AI builder",
+    rows: [
+      "You, learning as you go at night",
+      "Looks like the template it is",
+      "You fight the tool, the tool wins",
+      "Not on your radar until something breaks",
+      "Fast to start, stuck at the hard 80%",
+      "Cheap upfront, expensive in your hours",
+      "A half-built thing you cannot extend",
+      "Looks DIY, and your customers notice",
+    ],
+  },
+  {
+    key: "agency",
+    label: "A typical agency",
+    sub: "A team, an office, and a markup",
+    rows: [
+      "A junior you never meet, behind an account manager",
+      "On-brand-ish, designed by committee",
+      "AI used as a buzzword, same slow process",
+      "A checklist item, if that",
+      "Weeks of meetings before anything ships",
+      "Markup for the team, the office, the overhead",
+      "Locked into their platform and retainers",
+      "Fine, forgettable, and over budget",
+    ],
+  },
+  {
+    key: "me",
+    label: "Me",
+    sub: "One expert, end to end",
+    featured: true,
+    rows: [
+      "Me, start to finish. You talk to the person building it",
+      "Editorial and built to convert, from five years of design work",
+      "An expert operator. I direct the AI, it does not direct me",
+      "Built in. I worked inside a cybersecurity company",
+      "Days to weeks, with a live link from day one",
+      "Fixed price, no agency markup, no team to feed",
+      "The repo, the files, the accounts. No lock-in",
+      "Premium, working, and shipped on time",
+    ],
+  },
 ];
 
 /* Unlisted pricing page. Not in nav, footer, or sitemap; noindex. */

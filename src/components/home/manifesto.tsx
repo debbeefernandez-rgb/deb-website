@@ -9,7 +9,11 @@ import {
   type MotionValue,
 } from "motion/react";
 
-const LINES = ["Designed by hand.", "Built with AI.", "Shipped by one person."];
+const LINES = [
+  "AI made everyone fast.",
+  "And everyone looks the same.",
+  "I'm the difference.",
+];
 
 function WipeLine({
   text,
@@ -88,9 +92,10 @@ export function Manifesto() {
             </>
           )}
         </h2>
-        <p className="mx-auto mt-10 max-w-[44ch] text-[18px] leading-relaxed text-muted sm:text-[20px]">
-          A designer&apos;s taste with an engineer&apos;s leverage. That used to
-          take a team. Now it takes me and a very good AI.
+        <p className="mx-auto mt-10 max-w-[48ch] text-[18px] leading-relaxed text-muted sm:text-[20px]">
+          Same prompt as your competitor, same generic site. The value was
+          never the AI. It is the taste to make it yours, the rigor to make it
+          hold up, and the time to actually finish.
         </p>
       </div>
     </section>
