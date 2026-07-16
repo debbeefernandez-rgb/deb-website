@@ -9,11 +9,7 @@ import {
   type MotionValue,
 } from "motion/react";
 
-const LINES = [
-  "Anyone can prompt.",
-  "Most ships flat and generic.",
-  "Hire experience and judgment.",
-];
+const LINES = ["Anyone can prompt.", "Most ships flat and generic."];
 
 function WipeLine({
   text,
@@ -86,9 +82,8 @@ export function Manifesto() {
             ))
           ) : (
             <>
-              <WipeLine text={LINES[0]} progress={scrollYProgress} range={[0, 0.38]} />
-              <WipeLine text={LINES[1]} progress={scrollYProgress} range={[0.28, 0.66]} />
-              <WipeLine text={LINES[2]} progress={scrollYProgress} range={[0.56, 0.94]} />
+              <WipeLine text={LINES[0]} progress={scrollYProgress} range={[0, 0.52]} />
+              <WipeLine text={LINES[1]} progress={scrollYProgress} range={[0.4, 0.94]} />
             </>
           )}
         </h2>
