@@ -70,7 +70,7 @@ export const projects: Project[] = [
     imageAlt:
       "The RotyPeaks homepage: a scenic mountain view hero over a sea of clouds in Bukidnon",
     problem:
-      "RotyPeaks is a ridge campground famous for 360 mountain views, a sea of clouds, and a comfort room that went viral on TikTok. The site matched none of it. It led with camping when most of the revenue comes from ₱350 day tours, the main photo took 6.7 seconds to appear on mobile data, and duplicate listings plus an open contact form were pulling in spam and fake bookings.",
+      "RotyPeaks is a ridge campground famous for 360 mountain views, a sea of clouds, and a comfort room that went viral on TikTok. The site matched none of it. It led with camping when most of the revenue comes from ₱300 day tours, the main photo took 6.7 seconds to appear on mobile data, and duplicate listings plus an open contact form were pulling in spam and fake bookings.",
     approach:
       "I redesigned the brand experience and rebuilt the site from scratch in plain HTML, CSS, and vanilla JavaScript. No framework, no build step, nothing between the visitor and the view. The hero now opens with the scenery, the day tours that actually earn sit at the top, and every stay has its own page.",
     highlights: [
