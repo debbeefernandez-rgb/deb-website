@@ -94,8 +94,7 @@ export default function AboutPage() {
                   "B.S. Mining Engineering",
                   "Marketing inside a cybersecurity company, so I build cyber-aware",
                   "Five years as a remote operator for Forbes-featured founders, chief-of-staff level trust",
-                  "Trained with DICT, the Philippine government's ICT department",
-                  "Certified Social Media Manager, Philippines",
+                  "Certified Social Media Manager, DICT, the Philippine government's ICT department",
                   "Adobe ecosystem since my journalism days",
                 ].map((c) => (
                   <li
