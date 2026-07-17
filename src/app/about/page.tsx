@@ -78,11 +78,12 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="text-[16.5px] leading-relaxed text-muted">
-              Mining engineering degree, not software, and I don&apos;t pretend
-              otherwise. Time inside a cybersecurity company. Five
-              years with eCommerce brands and Forbes-featured founders. Then
-              AI arrived and I went all in. Everything on my work page runs in
-              production.
+              Mining engineering degree, not software, and I don&apos;t
+              pretend otherwise. Time inside a cybersecurity company. Five
+              years running things remotely for eCommerce brands and
+              Forbes-featured founders, trusted with the business, not just
+              the design. Then AI arrived and I went all in. Everything on my
+              work page runs in production.
             </p>
           </Reveal>
           <Reveal delay={0.16}>
@@ -92,7 +93,7 @@ export default function AboutPage() {
                 {[
                   "B.S. Mining Engineering",
                   "Marketing inside a cybersecurity company, so I build cyber-aware",
-                  "Five years with eCommerce brands and Forbes-featured founders",
+                  "Five years as a remote operator for Forbes-featured founders, chief-of-staff level trust",
                   "Trained with DICT, the Philippine government's ICT department",
                   "Certified Social Media Manager, Philippines",
                   "Adobe ecosystem since my journalism days",

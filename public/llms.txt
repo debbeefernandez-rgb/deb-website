@@ -9,7 +9,7 @@
 - Location: Bukidnon, Philippines (GMT+8), available worldwide, remote
 - Serves: Bukidnon (home base), the wider Philippines, and international clients
 - Stack: Next.js, React, TypeScript, Tailwind CSS, Motion, Vercel, plus Claude and Cursor for AI-assisted builds
-- Background: Five years in design (started in journalism and the Adobe suite), degree in mining engineering, DICT training, certified Social Media Manager in the Philippines
+- Background: Five years in design (started in journalism and the Adobe suite), five years as a remote operator at chief-of-staff level for overseas founders, degree in mining engineering, marketing role inside a cybersecurity company, DICT training, certified Social Media Manager in the Philippines
 
 ## Services
 
