@@ -21,7 +21,6 @@
 
 - RotyPeaks Ridge Camp: redesign and full rebuild for a viral mountain campsite in Impasug-ong, Bukidnon. Main photo load cut from 6.7s to 0.9s, Google PageSpeed from 60 to 95. https://debfernandez.com/work/rotypeaks
 - Adreil & Co.: editorial website for a destination wedding photographer working across the Philippines, the US, and worldwide. https://debfernandez.com/work/adreil-co
-- AI Compliance Checker: an AI pipeline that flags non-compliant copy in seconds, 92% less time on legal review. https://debfernandez.com/work/ai-compliance-checker
 - AI Content Engine: an end to end content factory, 10x output at the same headcount. https://debfernandez.com/work/ai-content-engine
 
 ## Contact

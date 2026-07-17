@@ -87,47 +87,19 @@ export const projects: Project[] = [
     liveUrl: "https://rotypeaks.vercel.app",
   },
   {
-    slug: "ai-compliance-checker",
-    title: "AI Compliance Checker",
-    category: "AI product",
-    year: "2025",
-    client: "Professional services firm",
-    blurb:
-      "An AI pipeline that flags non-compliant copy in seconds. It replaced a 3 hour manual review.",
-    outcome: "92% less time on legal review",
-    stack: ["Claude", "Python", "Retool", "Vercel"],
-    image: "/images/work-compliance.webp",
-    imageAlt: "Compliance dashboard showing posts reviewed, compliance score, and flagged categories",
-    problem:
-      "Compliance was the bottleneck on every launch. Write, flag, rewrite, flag again. Average turnaround: 11 days.",
-    approach:
-      "An AI classifier trained on five years of red-lined documents, a review console with confidence scores, and a Slack bot that files review tickets the moment a doc goes live.",
-    highlights: [
-      {
-        heading: "What I designed",
-        body: "A calm, dense review console. Three states, keyboard shortcuts, dark by default. Built for legal teams who hate software.",
-      },
-      {
-        heading: "What I built",
-        body: "Model first, rules for edge cases. Humans only see the gray-area 18%. The rest clears or blocks automatically.",
-      },
-    ],
-    brief: "flag risky copy before legal sees it",
-  },
-  {
     slug: "ai-content-engine",
     title: "AI Content Engine",
     category: "AI product",
     year: "2025",
     client: "Multi-brand DTC company",
     blurb:
-      "An end to end content factory: brief to draft to image to schedule. One person, ten brands, sixty posts a week.",
+      "An end to end content factory: brief to draft to image to schedule. One person running the output of a full content team.",
     outcome: "10x output, same headcount",
     stack: ["Claude Code", "Airtable", "Webflow"],
     image: "/images/work-content-engine.webp",
     imageAlt: "Content automation studio with live generation runs and a scheduled post pipeline",
     problem:
-      "Five brands, one content lead, an impossible backlog. Fifteen posts a week when the goal was sixty.",
+      "One content lead, an impossible backlog, and a publishing goal the team could not reach by hand.",
     approach:
       "Brand voice cards plus a pipeline that drafts copy, generates imagery, queues everything for review, and pushes approved posts to Webflow. The quality gate is one thumbs-up button.",
     highlights: [
@@ -141,34 +113,6 @@ export const projects: Project[] = [
       },
     ],
     brief: "60 posts a week without hiring",
-  },
-  {
-    slug: "brand-identity-system",
-    title: "Brand Identity System",
-    category: "Brand",
-    year: "2025",
-    client: "B2B fintech",
-    blurb:
-      "Wordmark, colorways, motion rules, and a Figma library for a fintech that needed to look like the grown-up in the room.",
-    outcome: "Closed Series A two months later",
-    stack: ["Figma", "After Effects", "Tokens Studio"],
-    image: "/images/work-brand-identity.webp",
-    imageAlt: "Brand identity case study board with wordmark, color system, and motion principles",
-    problem:
-      "A pre-Series-A fintech with a logo a friend made in Canva. The deck looked like a side project. Investors noticed.",
-    approach:
-      "One confident wordmark. A token system tying brand to product to marketing. A 40 page guideline an intern can follow.",
-    highlights: [
-      {
-        heading: "Tokens, not files",
-        body: "Color, type, spacing, and motion live in Tokens Studio and flow into Figma and Tailwind. Brand updates take minutes, not weeks.",
-      },
-      {
-        heading: "Motion as a language",
-        body: "Three easings, three durations, one rule: nothing animates without a reason. A one-pager engineering actually read.",
-      },
-    ],
-    brief: "look fundable before the raise",
   },
   {
     slug: "ecommerce-campaign",
@@ -203,10 +147,10 @@ export const projects: Project[] = [
     title: "Social Content at Scale",
     category: "Brand",
     year: "2020–now",
-    client: "Various brands",
+    client: "B2B SaaS, a Salesforce vendor, startups",
     blurb:
-      "Thousands of posts across every brand and platform: carousels, statics, stories, ad creative, quote cards.",
-    outcome: "5,000+ posts shipped to date",
+      "2,000+ designs across every brand and platform: carousels, statics, stories, ad creative, quote cards.",
+    outcome: "2,000+ designs shipped to date",
     stack: ["Figma", "Photoshop", "Canva", "Illustrator", "After Effects"],
     image: "/images/work-social-posts.webp",
     imageAlt: "Grid of social media posts across multiple brands and platforms",
@@ -234,7 +178,7 @@ export const projects: Project[] = [
     client: "Various brands",
     blurb:
       "Promos, launches, invites, and win-back flows. Bold type, custom illustration, built straight into Klaviyo or Mailchimp.",
-    outcome: "38% average open rate",
+    outcome: "Designed like posters, shipped as HTML",
     stack: ["Figma", "Photoshop", "Klaviyo", "Mailchimp", "HTML"],
     image: "/images/work-email-campaign.webp",
     imageAlt: "Five email campaign designs side by side",

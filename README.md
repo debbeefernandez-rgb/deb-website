@@ -29,8 +29,8 @@ Same idea: **Add New Project**, import the repo, deploy. Vercel detects Next.js 
 
 | Path | What it is |
 | --- | --- |
-| `src/lib/site.ts` | All copy that repeats: services, stats, FAQs, testimonials, contact links, availability status |
-| `src/lib/projects.ts` | The six case studies. Add a project here and it appears on the home page, /work, the sitemap, and gets its own page |
+| `src/lib/site.ts` | All copy that repeats: services, stats, FAQs, contact links, availability status |
+| `src/lib/projects.ts` | The case studies. Add a project here and it appears on the home page, /work, the sitemap, and gets its own page |
 | `src/app/` | Routes: home, /work, /work/[slug], /about, /contact, 404, sitemap, robots |
 | `src/components/home/` | Home page sections in order |
 | `src/components/` | Shared pieces: nav, footer, command menu, cursor, reveals, marquee |

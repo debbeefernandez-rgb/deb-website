@@ -132,27 +132,6 @@ export const processSteps = [
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "Deb built in two weeks what our last agency couldn't in three months. And it looked like us.",
-    name: "Founder",
-    role: "Series A SaaS, NYC",
-  },
-  {
-    quote:
-      "She doesn't just make things pretty, she makes them work. That automation still saves us money.",
-    name: "Head of Marketing",
-    role: "DTC apparel brand",
-  },
-  {
-    quote:
-      "Hired her twice. Will hire her a third time. Designers who can build working software are unicorns.",
-    name: "TEDx Speaker & Founder",
-    role: "Professional services firm",
-  },
-];
-
 export const faqs = [
   {
     q: "If it's just AI, why can't I do it myself?",
