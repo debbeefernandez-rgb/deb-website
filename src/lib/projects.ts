@@ -84,7 +84,7 @@ export const projects: Project[] = [
       },
     ],
     brief: "sell the day tours, load fast",
-    liveUrl: "https://rotypeaks.vercel.app",
+    liveUrl: "https://rotypeaks.com",
   },
   {
     slug: "social-agent",
