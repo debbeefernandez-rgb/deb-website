@@ -65,7 +65,7 @@ export const projects: Project[] = [
     blurb:
       "A redesign and full rebuild for a viral mountain campsite in Bukidnon. Sell the right product, load 7x faster, and feel like standing on the ridge.",
     outcome: "6.7s to 0.9s load, 7x faster",
-    stack: ["HTML", "CSS", "Vanilla JS", "Vercel"],
+    stack: ["HTML", "CSS", "Vanilla JS", "Cloudways"],
     image: "/images/work-rotypeaks.webp",
     imageAlt:
       "The RotyPeaks homepage: a scenic mountain view hero over a sea of clouds in Bukidnon",
