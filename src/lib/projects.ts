@@ -87,32 +87,34 @@ export const projects: Project[] = [
     liveUrl: "https://rotypeaks.vercel.app",
   },
   {
-    slug: "ai-content-engine",
-    title: "AI Content Engine",
+    slug: "social-agent",
+    title: "Social Agent",
     category: "AI product",
     year: "2025",
-    client: "Multi-brand DTC company",
+    client: "A brand client · now a public sandbox",
     blurb:
-      "An end to end content factory: brief to draft to image to schedule. One person running the output of a full content team.",
+      "An AI social media generator: it drafts the posts, builds the visuals, and queues everything for one-click approval. Built for a brand client, then stripped of their data and rebranded as a sandbox you can try.",
     outcome: "10x output, same headcount",
-    stack: ["Claude Code", "Airtable", "Webflow"],
-    image: "/images/work-content-engine.webp",
-    imageAlt: "Content automation studio with live generation runs and a scheduled post pipeline",
+    stack: ["Claude Code", "Claude", "Publer"],
+    image: "/images/demo-queue.webp",
+    imageAlt:
+      "The Social Agent queue: drafted posts awaiting approval, with retry, reschedule, and regenerate controls",
     problem:
       "One content lead, an impossible backlog, and a publishing goal the team could not reach by hand.",
     approach:
-      "Brand voice cards plus a pipeline that drafts copy, generates imagery, queues everything for review, and pushes approved posts to Webflow. The quality gate is one thumbs-up button.",
+      "I built the pipeline end to end: brand voice cards, AI drafting, image generation, and a review queue where a human approves, rejects, or regenerates before anything publishes. Then I stripped the client data, rebranded the raw build, and put it online as a live sandbox.",
     highlights: [
       {
-        heading: "Brand voice as data",
-        body: "Each brand gets a voice card: adjectives, banned words, sentence length. The model reads it before every prompt.",
+        heading: "Human in the loop",
+        body: "AI never publishes on its own. Drafts land in the queue. One click approves, one regenerates, one edits. Failed publishes float to the top so you can retry them first.",
       },
       {
-        heading: "Human in the loop",
-        body: "AI never publishes. Drafts land in a review board. One click approves, one re-rolls, one escalates to a human.",
+        heading: "Don't trust the screenshot",
+        body: "The screenshot is the real app. So is the demo: the same build I shipped, client data stripped, rebranded, live for anyone to click through.",
       },
     ],
-    brief: "60 posts a week without hiring",
+    brief: "content at scale without hiring",
+    liveUrl: "https://socialmedia.debfernandez.com/queue",
   },
   {
     slug: "ecommerce-campaign",
