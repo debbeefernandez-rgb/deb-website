@@ -12,7 +12,6 @@ export function SelectedWork() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
             index=""
-            eyebrow="Selected work"
             lines={[
               "Real builds,",
               <span key="2">

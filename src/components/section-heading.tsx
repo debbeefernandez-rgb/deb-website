@@ -13,7 +13,7 @@ export function SectionHeading({
   align = "left",
 }: {
   index: string;
-  eyebrow: string;
+  eyebrow?: string;
   lines: ReactNode[];
   lede?: ReactNode;
   align?: "left" | "center";
@@ -31,12 +31,14 @@ export function SectionHeading({
           {index}
         </span>
       )}
-      <Reveal>
-        <p className={`eyebrow relative ${index ? "pt-10" : ""}`}>
-          <span className="mr-2.5 inline-block size-1.5 rounded-full bg-accent align-middle" />
-          {eyebrow}
-        </p>
-      </Reveal>
+      {eyebrow && (
+        <Reveal>
+          <p className={`eyebrow relative ${index ? "pt-10" : ""}`}>
+            <span className="mr-2.5 inline-block size-1.5 rounded-full bg-accent align-middle" />
+            {eyebrow}
+          </p>
+        </Reveal>
+      )}
       <h2 className="display relative mt-5 text-[clamp(2.3rem,5.2vw,4.2rem)] leading-[1.02]">
         <RevealLines lines={lines} />
       </h2>
