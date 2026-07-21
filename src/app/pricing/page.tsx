@@ -22,7 +22,6 @@ export default function PricingPage() {
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <SectionHeading
           index=""
-          eyebrow="Pricing"
           lines={[
             "Fixed price.",
             <span key="2">

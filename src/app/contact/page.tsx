@@ -14,14 +14,7 @@ export default function ContactPage() {
   return (
     <div className="pt-36 pb-28">
       <div className="mx-auto max-w-300 px-5 sm:px-7">
-        <Reveal>
-          <p className="eyebrow">
-            <span className="text-accent">Contact</span>
-            <span className="mx-3 text-faint">/</span>
-            Two ways in, both fast
-          </p>
-        </Reveal>
-        <h1 className="display mt-6 text-[clamp(3rem,8vw,7rem)] leading-[0.98]">
+        <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.98]">
           <RevealLines
             lines={[
               "Let's do the",
@@ -46,10 +39,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="shine glass-accent group block h-full rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
             >
-              <span className="flex items-center justify-between">
-                <span className="eyebrow text-accent-bright">
-                  15 minute intro call
-                </span>
+              <span className="flex items-center justify-end">
                 <ArrowUpRight className="size-5 text-accent transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </span>
               <span className="display mt-5 block text-[clamp(1.7rem,3vw,2.2rem)]">
@@ -70,8 +60,7 @@ export default function ContactPage() {
               href={`mailto:${site.email}`}
               className="shine glass group block h-full rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
             >
-              <span className="flex items-center justify-between">
-                <span className="eyebrow">Direct</span>
+              <span className="flex items-center justify-end">
                 <ArrowUpRight className="size-5 text-faint transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </span>
               <span className="display mt-5 block text-[clamp(1.7rem,3vw,2.2rem)]">
@@ -91,8 +80,7 @@ export default function ContactPage() {
         <Reveal delay={0.2}>
           <div className="mt-5 flex max-w-4xl flex-wrap items-center justify-between gap-6 rounded-2xl border border-line bg-bg-deep p-8">
             <div>
-              <p className="eyebrow">Not ready to talk?</p>
-              <p className="mt-2.5 max-w-[44ch] text-[15px] leading-relaxed text-muted">
+              <p className="max-w-[44ch] text-[15px] leading-relaxed text-muted">
                 See the work first, or just lurk on Instagram, mostly the
                 dogs.
               </p>

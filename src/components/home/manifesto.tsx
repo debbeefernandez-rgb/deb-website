@@ -70,10 +70,7 @@ export function Manifesto() {
         }}
       />
       <div className="relative mx-auto max-w-300 px-5 text-center sm:px-7">
-        <p className="eyebrow">
-          <span className="text-accent">The short version</span>
-        </p>
-        <h2 className="display mt-10 text-[clamp(2.4rem,7.5vw,6.5rem)] leading-[1.04]">
+        <h2 className="display text-[clamp(2.4rem,7.5vw,6.5rem)] leading-[1.04]">
           {reduce ? (
             LINES.map((l) => (
               <span key={l} className="block text-fg">

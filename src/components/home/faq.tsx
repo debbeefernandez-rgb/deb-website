@@ -16,7 +16,6 @@ export function Faq() {
           <div>
             <SectionHeading
               index=""
-              eyebrow="Straight answers"
               lines={[
                 "The questions",
                 <span key="2">

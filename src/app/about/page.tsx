@@ -24,14 +24,7 @@ export default function AboutPage() {
     <div className="pt-36 pb-28">
       {/* intro */}
       <section className="mx-auto max-w-300 px-5 sm:px-7">
-        <Reveal>
-          <p className="eyebrow">
-            <span className="text-accent">About</span>
-            <span className="mx-3 text-faint">/</span>
-            The person behind the work
-          </p>
-        </Reveal>
-        <h1 className="display mt-6 text-[clamp(3rem,8vw,7rem)] leading-[0.98]">
+        <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.98]">
           <RevealLines
             lines={[
               <span key="1">
@@ -178,14 +171,7 @@ export default function AboutPage() {
           </Reveal>
 
           <div>
-            <Reveal>
-              <p className="eyebrow">
-                <span className="text-accent">Off the clock</span>
-                <span className="mx-3 text-faint">/</span>
-                Hyrox
-              </p>
-            </Reveal>
-            <h2 className="display mt-5 text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05]">
+            <h2 className="display text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05]">
               <RevealLines
                 lines={[
                   "Same muscles,",
@@ -229,14 +215,7 @@ export default function AboutPage() {
       <section className="mx-auto mt-28 max-w-300 px-5 sm:px-7">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="order-2 lg:order-1">
-            <Reveal>
-              <p className="eyebrow">
-                <span className="text-accent">Off the clock</span>
-                <span className="mx-3 text-faint">/</span>
-                The board of directors
-              </p>
-            </Reveal>
-            <h2 className="display mt-5 text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05]">
+            <h2 className="display text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.05]">
               <RevealLines
                 lines={[
                   "Why is this site",
@@ -255,8 +234,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <div className="glass-accent mt-7 rounded-2xl p-6">
-                <p className="eyebrow text-accent-bright">Trust note</p>
-                <p className="mt-3 text-[15px] leading-relaxed">
+                <p className="text-[15px] leading-relaxed">
                   You&apos;re hiring a person, not a process. I show up and
                   tell you the truth about scope.
                 </p>
@@ -309,12 +287,7 @@ export default function AboutPage() {
       >
         <Reveal>
           <div className="rounded-2xl border border-line bg-bg-deep p-8 sm:p-12">
-            <p className="eyebrow">
-              <span className="text-accent">Colophon</span>
-              <span className="mx-3 text-faint">/</span>
-              Case study zero
-            </p>
-            <h2 className="display mt-5 max-w-[24ch] text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight">
+            <h2 className="display max-w-[24ch] text-[clamp(1.7rem,3.6vw,2.6rem)] leading-tight">
               This site is the proof. I built it the way I&apos;ll build
               yours.
             </h2>

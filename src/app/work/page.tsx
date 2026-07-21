@@ -17,7 +17,6 @@ export default function WorkPage() {
       <div className="mx-auto max-w-300 px-5 sm:px-7">
         <SectionHeading
           index=""
-          eyebrow="The receipts"
           lines={[
             "Shipped,",
             <span key="2">
